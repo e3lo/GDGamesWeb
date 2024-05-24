@@ -14,10 +14,3 @@
 
 .nav__logo {
 }
-
-.qr {
-  display: flex;
-  z-index: 100;
-  background-color: red;
-  height: 2rem;
-}

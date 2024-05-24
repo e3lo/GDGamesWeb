@@ -8,10 +8,13 @@ export class Component {
     console.log(typeof template);
   }
 
-  render(parentNode) {
-    const templateClone = this.template.cloneNode(true);
+  createElement(parentNode) {
+    const templateClone = this.template.content.cloneNode(true);
 
-    parentNode.appendChild(templateClone);
-    console.log("done!");
+    return templateClone;
+  }
+
+  render(parentNode) {
+    parentNode.appendChild(this.createElement(parentNode));
   }
 }

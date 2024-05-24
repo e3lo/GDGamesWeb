@@ -5,7 +5,10 @@ export class QrStyle extends Component {
     super("app-qr-style");
   }
 
-  render(parentNode) {
-    super.render(parentNode);
+  createElement(parentNode) {
+    const templateClone = this.template.content.cloneNode(true);
+    console.log(parentNode.attributes);
+
+    return templateClone;
   }
 }
