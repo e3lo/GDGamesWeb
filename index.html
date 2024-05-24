@@ -5,9 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GD Games</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/reset.css" />
   </head>
   <body>
-    <script src="js/index.js"></script>
+    <nav class="nav">
+      <div class="nav__logo">GD GAMES</div>
+      <ul>
+        <li>Home</li>
+        <li>Xbox</li>
+        <li>Playstation</li>
+        <li>My cart</li>
+      </ul>
+    </nav>
+    <main>
+      <!-- Hero -->
+      <div>
+        <ul>
+          <!-- Featured Items -->
+          <li>
+            <img />
+            <div>
+              <p>PS5 Collectors Edition</p>
+              <h2>FINAL FANTASY VII</h2>
+            </div>
+            <app-qr-style>GAME OF THE YEAR</app-qr-style>
+            <button>View Item</button>
+          </li>
+
+          <!-- Featured Items -->
+          <li>
+            <img />
+            <div>
+              <p>PS5 Collectors Edition</p>
+              <h2>FINAL FANTASY VII</h2>
+            </div>
+            <app-qr-style>GAME OF THE YEAR</app-qr-style>
+            <button>View Item</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Store Category -->
+      <section>
+        <div>
+          <h2>Store Category</h2>
+          <p>Explore our wide collection of products</p>
+        </div>
+        <ul>
+          <!-- Store Items -->
+          <li>
+            <img />
+            <h3>PLAYSTATION</h3>
+            <p>Games, Controllers, Consoles and more</p>
+            <button>Shop Category</button>
+          </li>
+          <li>
+            <img />
+            <h3>PLAYSTATION</h3>
+            <p>Games, Controllers, Consoles and more</p>
+            <button>Shop Category</button>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <img />
+        <app-qr-style>GOD OF WAR</app-qr-style>
+        <div>
+          <h2>PLAYSTATION</h2>
+          <p>Home to many exclusive award winning games</p>
+        </div>
+        <button>Shop Category</button>
+        <!-- Grids -->
+        <div>
+          <div>
+            <strong>387+</strong>
+            <p>Games available</p>
+          </div>
+
+          <div>
+            <img />
+          </div>
+          <div>
+            <img />
+            <div>
+              <p>Limited Stock</p>
+              <b>PS5 Digital Edition</b>
+              <button>Shop Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horzontal Scrolling -->
+        <ul>
+          <li>
+            <img />
+            <p>PS5 Physical/Digital Edition</p>
+            <b>Spider-man Remastered</b>
+            <p>Co-op, FPS</p>
+            <p>$89</p>
+            <button>View Item</button>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
+  <template id="app-qr-style-template" class="qr">
+    <div>
+      <p>Templateeeeee</p>
+      <b>Templater</b>
+    </div>
+  </template>
+  <script type="module" src="js/index.js"></script>
 </html>

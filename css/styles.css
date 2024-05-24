@@ -1,0 +1,23 @@
+:root {
+  --main-color: #06c;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  border: 2px solid red;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+}
+
+.nav__logo {
+}
+
+.qr {
+  display: flex;
+  z-index: 100;
+  background-color: red;
+  height: 2rem;
+}
