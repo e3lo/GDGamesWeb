@@ -7,18 +7,16 @@
     <title>GD Games</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/reset.css" />
+
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="nav">
-      <div class="nav__logo">GD GAMES</div>
-      <ul>
-        <li>Home</li>
-        <li>Xbox</li>
-        <li>Playstation</li>
-        <li>My cart</li>
-      </ul>
-    </nav>
     <main>
+      <app-navigation></app-navigation>
       <!-- Hero -->
       <div>
         <ul>
@@ -68,7 +66,6 @@
           </li>
         </ul>
       </section>
-
       <section>
         <img />
         <app-qr-style>GOD OF WAR</app-qr-style>
@@ -116,6 +113,30 @@
       <p -text="body" class="GD__barcode"></p>
       <p -text="body" class="GD__barcode--text"></p>
     </div>
+  </template>
+  <template id="app-navigation">
+    <nav class="nav">
+      <div class="nav__bar">
+        <div class="GD__text--logo">GD GAMES</div>
+        <ul class="nav__links">
+          <li>Home</li>
+          <li>Xbox</li>
+          <li>Playstation</li>
+          <li>My cart</li>
+        </ul>
+        <span class="GD__icon nav__menu" onclick="onMobileNavClick(event)"
+          >menu</span
+        >
+      </div>
+      <div id="nav__popup">
+        <ul class="nav__links--mobile GD__text--lg">
+          <li>Home</li>
+          <li>Xbox</li>
+          <li>Playstation</li>
+          <li>My cart</li>
+        </ul>
+      </div>
+    </nav>
   </template>
   <script type="module" src="js/index.js"></script>
 </html>

@@ -15,4 +15,6 @@ export class ComponentHandler {
       });
     });
   }
+
+  handleEvents() {}
 }

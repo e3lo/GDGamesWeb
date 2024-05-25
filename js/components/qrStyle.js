@@ -1,11 +1,11 @@
-import { Component } from "./component.js";
+import { Component } from '../framework/component.js';
 
-export class QrStyle extends Component {
+export default class QrStyle extends Component {
   constructor() {
-    super("app-qr-style");
+    super('app-qr-style');
 
     this.props = {
-      body: "",
+      body: '',
     };
   }
 
