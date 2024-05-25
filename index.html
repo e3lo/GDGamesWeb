@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/reset.css" />
 
+    <!-- Component Stylesheets -->
+    <link rel="stylesheet" href="css/components/barcode.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+
     <!-- Google Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -18,31 +22,54 @@
     <main>
       <app-navigation></app-navigation>
       <!-- Hero -->
-      <div>
-        <ul>
+      <section class="landing-hero">
+        <ol class="landing-hero__items" id="hero-list">
           <!-- Featured Items -->
           <li>
-            <img />
-            <div>
-              <p>PS5 Collectors Edition</p>
-              <h2>FINAL FANTASY VII</h2>
+            <div class="landing-hero__items__content">
+              <img src="/assets/decor/liss_1.svg" />
+              <div>
+                <p>PS5 Collectors Edition</p>
+                <h2 class="GD__text--2xl">FINAL FANTASY VII</h2>
+              </div>
             </div>
-            <app-qr-style body="GAME OF THE hihihihh"></app-qr-style>
-            <button>View Item</button>
+            <app-barcode body="GAME OF THE YEAR"></app-barcode>
           </li>
 
           <!-- Featured Items -->
           <li>
-            <img />
-            <div>
-              <p>PS5 Collectors Edition</p>
-              <h2>FINAL FANTASY VII</h2>
+            <div class="landing-hero__items__content">
+              <img src="/assets/decor/liss_1.svg" />
+              <div>
+                <p>2010s Classic</p>
+                <h2 class="GD__text--2xl">NieR: Automata</h2>
+              </div>
             </div>
-            <app-qr-style body="GAME OF THE CENTURY"></app-qr-style>
-            <button>View Item</button>
+            <app-barcode body="AWARD WINNING"></app-barcode>
           </li>
-        </ul>
-      </div>
+
+          <!-- Featured Items -->
+          <li>
+            <div class="landing-hero__items__content">
+              <img src="/assets/decor/liss_1.svg" />
+              <div>
+                <p>Most anticipated</p>
+                <h2 class="GD__text--2xl">Silksong</h2>
+              </div>
+            </div>
+            <app-barcode body="AWARD WINNING"></app-barcode>
+          </li>
+        </ol>
+
+        <div class="landing-hero__carousel">
+          <button onclick="onLandingHeroClick()">View Item</button>
+          <ol id="hero-selection-list">
+            <li onclick="changeActive(0)"></li>
+            <li onclick="changeActive(1)"></li>
+            <li onclick="changeActive(2)"></li>
+          </ol>
+        </div>
+      </section>
 
       <!-- Store Category -->
       <section>
@@ -108,7 +135,7 @@
       </section>
     </main>
   </body>
-  <template id="app-qr-style-template">
+  <template id="app-barcode">
     <div class="barcode">
       <p -text="body" class="GD__barcode"></p>
       <p -text="body" class="GD__barcode--text"></p>

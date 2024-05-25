@@ -1,8 +1,8 @@
 import { Component } from '../framework/component.js';
 
-export default class QrStyle extends Component {
+export default class Barcode extends Component {
   constructor() {
-    super('app-qr-style');
+    super('app-barcode');
 
     this.props = {
       body: '',
