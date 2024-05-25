@@ -30,6 +30,14 @@ button {
   border: none;
   font-weight: 900;
   font-size: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* Fonts */
@@ -111,19 +119,16 @@ button {
 }
 
 .landing-hero__items__content {
-  display: grid;
-  grid-template: 1fr / 1fr;
+  width: 100%;
+  height: 20rem;
   padding: 1em 0;
-}
-
-.landing-hero__items__content > img {
-  grid-column: 1;
-  grid-row: 1;
+  background-image: url(/assets/decor/liss_1.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
 }
 
 .landing-hero__items__content > div {
-  grid-column: 1;
-  grid-row: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -165,4 +170,23 @@ button {
   text-align: center;
   border: 2px solid #fffbda;
   border-radius: 0.2em;
+}
+
+@media (min-width: 640px) {
+  .landing-hero {
+    min-height: 50vh;
+  }
+
+  .landing-hero__items {
+    max-width: 1100px;
+  }
+
+  #hero-selection-list {
+    justify-content: center;
+  }
+
+  #hero-selection-list li {
+    height: 180px;
+    width: 300px;
+  }
 }
