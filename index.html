@@ -112,8 +112,10 @@
     </main>
   </body>
   <template id="app-qr-style-template">
-    <p -text="body"></p>
-    <p -text="body"></p>
+    <div class="barcode">
+      <p -text="body" class="GD__barcode"></p>
+      <p -text="body" class="GD__barcode--text"></p>
+    </div>
   </template>
   <script type="module" src="js/index.js"></script>
 </html>

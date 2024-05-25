@@ -1,5 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zilla+Slab:wght@400;500&display=swap');
+
 :root {
-  --main-color: #06c;
+  --dark: #171717;
+  --cream: #fffbda;
+  --green: #4ade80;
+}
+
+* {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--cream);
+}
+
+/* Fonts */
+
+.GD__text--3xl {
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.GD__text--2xl {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.GD__text--xl {
+  font-weight: 900;
+  font-size: 2.25rem;
+}
+
+.GD__text--lg {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.GD__text--md {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.GD__text--sm {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.GD__barcode {
+  font-family: 'Libre Barcode 39', system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.GD__barcode--text {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.75rem;
+  margin-top: -0.3rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Barcode Styling */
+.barcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--cream);
 }
 
 .nav {
@@ -10,6 +87,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 0rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .GD__barcode {
+    font-size: 2rem;
+  }
+
+  .GD__barcode--text {
+    font-size: 1rem;
+    margin-top: -0.6rem;
+    letter-spacing: 0.4rem;
+  }
 }
 
 .nav__logo {
