@@ -41,8 +41,7 @@ export class Component {
 
   setTextBinding(templateClone) {
     for (let key in this.props) {
-      let results = templateClone.querySelectorAll(`[text = ${key}]`);
-      console.log(results);
+      let results = templateClone.querySelectorAll(`[-text = ${key}]`);
       results.forEach((element) => {
         element.innerHTML = this.props[key];
       });

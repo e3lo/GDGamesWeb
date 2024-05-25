@@ -11,7 +11,6 @@ export class QrStyle extends Component {
 
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
-
     return templateClone;
   }
 }
