@@ -1,0 +1,82 @@
+.category-section {
+  width: 100%;
+  background: linear-gradient(rgba(48, 48, 48, 0.4), rgba(23, 23, 23, 1)),
+    url(/assets/banners/GoW.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 4rem;
+}
+
+.category-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  padding: 0 2rem;
+  padding-top: 2rem;
+}
+
+.category-section__title {
+  background: url(/assets/decor/liss_3.svg);
+  width: 100%;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-section__bento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.bento {
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--cream);
+  border-radius: 0.4rem;
+}
+
+.category-section__bento__stat {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(rgba(23, 23, 23, 0.6), rgba(23, 23, 23, 0.6)),
+    url(/assets/decor/ps5Controller.jpg);
+  background-size: cover;
+}
+
+.category-section__bento__img {
+  grid-column: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background: url(/assets/products/spiderman.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.category-section__bento__item {
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  justify-content: end;
+  row-gap: 0.5rem;
+  background: linear-gradient(rgba(23, 23, 23, 0.6), rgba(23, 23, 23, 0.6)),
+    url(/assets/products/ps5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bento__button {
+  padding: 1rem 1rem;
+}
