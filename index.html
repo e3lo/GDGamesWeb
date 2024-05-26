@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/reset.css" />
 
+    <!-- Page Stylesheet -->
+    <link rel="stylesheet" href="css/pages/index.css" />
+
     <!-- Component Stylesheets -->
     <link rel="stylesheet" href="css/components/barcode.css" />
     <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/item.css" />
 
     <!-- Google Icons -->
     <link
@@ -29,7 +33,7 @@
             <div class="landing-hero__items__content">
               <div>
                 <p>PS5 Collectors Edition</p>
-                <h2 class="GD__text--2xl">FINAL FANTASY VII</h2>
+                <h2 class="GD__text--3xl">FINAL FANTASY VII</h2>
               </div>
             </div>
             <app-barcode body="GAME OF THE YEAR"></app-barcode>
@@ -40,7 +44,7 @@
             <div class="landing-hero__items__content">
               <div>
                 <p>2010s Classic</p>
-                <h2 class="GD__text--2xl">NieR: Automata</h2>
+                <h2 class="GD__text--3xl">NieR: Automata</h2>
               </div>
             </div>
             <app-barcode body="AWARD WINNING"></app-barcode>
@@ -51,7 +55,7 @@
             <div class="landing-hero__items__content">
               <div>
                 <p>Most anticipated</p>
-                <h2 class="GD__text--2xl">Silksong</h2>
+                <h2 class="GD__text--3xl">Silksong</h2>
               </div>
             </div>
             <app-barcode body="AWARD WINNING"></app-barcode>
@@ -69,26 +73,34 @@
       </section>
 
       <!-- Store Category -->
-      <section>
-        <div>
-          <h2>Store Category</h2>
-          <p>Explore our wide collection of products</p>
+      <section class="store-category">
+        <div class="container">
+          <div class="store-category__title">
+            <h2 class="GD__text--xl">STORE CATEGORY</h2>
+            <p>Explore our wide collection of products</p>
+          </div>
+          <ul class="item-collection">
+            <!-- Store Items -->
+            <app-item
+              title="PLAYSTATION"
+              type=""
+              description="Games, Controllers, Consoles and more"
+              src="/assets/products/ps5.jpg"
+            ></app-item>
+            <app-item
+              title="Xbox"
+              type=""
+              description="Games, Controllers, Consoles and more"
+              src="/assets/products/xbox.jpg"
+            ></app-item>
+            <app-item
+              title="PC"
+              type=""
+              description="Peripherals, Games and PC Parts"
+              src="/assets/products/xbox.jpg"
+            ></app-item>
+          </ul>
         </div>
-        <ul>
-          <!-- Store Items -->
-          <li>
-            <img />
-            <h3>PLAYSTATION</h3>
-            <p>Games, Controllers, Consoles and more</p>
-            <button>Shop Category</button>
-          </li>
-          <li>
-            <img />
-            <h3>PLAYSTATION</h3>
-            <p>Games, Controllers, Consoles and more</p>
-            <button>Shop Category</button>
-          </li>
-        </ul>
       </section>
       <section>
         <img />
@@ -132,6 +144,7 @@
       </section>
     </main>
   </body>
+
   <template id="app-barcode">
     <div class="barcode">
       <p -text="body" class="GD__barcode"></p>
@@ -162,6 +175,20 @@
         </ul>
       </div>
     </nav>
+  </template>
+  <template id="app-item">
+    <li class="item">
+      <picture class="item__picture">
+        <img src="/assets/products/xbox.jpg" />
+      </picture>
+      <p -text="type" class="GD__text--sm"></p>
+      <h3 -text="title" class="GD__text--lg"></h3>
+      <div class="item__info">
+        <p -text="description" class="GD__text--sm"></p>
+        <p -text="price" class="item__info__price"></p>
+      </div>
+      <button class="item-button">Shop Category</button>
+    </li>
   </template>
   <script type="module" src="js/index.js"></script>
 </html>

@@ -42,23 +42,28 @@ button:hover {
 
 /* Fonts */
 
-.GD__text--3xl {
+.GD__text--4xl {
   font-weight: 900;
   font-size: 4rem;
 }
 
-.GD__text--2xl {
+.GD__text--3xl {
   font-weight: 900;
   font-size: 3rem;
 }
 
-.GD__text--xl {
+.GD__text--2xl {
   font-weight: 900;
   font-size: 2.25rem;
 }
 
+.GD__text--xl {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
 .GD__text--lg {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.5rem;
 }
 
@@ -91,102 +96,18 @@ button:hover {
   direction: ltr;
 }
 
-/* Hero styling */
-
-.landing-hero {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 90vh;
-  padding-top: 8rem;
-}
-
-.landing-hero__items {
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: row;
-  overflow-x: hidden;
-}
-
-.landing-hero__items > li {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.landing-hero__items__content {
-  width: 100%;
-  height: 20rem;
-  padding: 1em 0;
-  background-image: url(/assets/decor/liss_1.svg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  margin-bottom: 1rem;
-}
-
-.landing-hero__items__content > div {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.landing-hero__carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 2em;
-  row-gap: 2rem;
-}
-
-#hero-selection-list {
-  padding-left: 2rem;
+/* Item Collection */
+.item-collection {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
-  width: 100%;
-  gap: 1rem;
+  column-gap: 1rem;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  padding: 0 2rem;
 }
 
-#hero-selection-list > li {
-  height: 120px;
-  width: 200px;
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 900;
-  font-size: 1.25rem;
-  padding: 1rem;
-  text-align: center;
-  border: 2px solid #fffbda;
-  border-radius: 0.2em;
-}
-
-@media (min-width: 640px) {
-  .landing-hero {
-    min-height: 50vh;
-  }
-
-  .landing-hero__items {
-    max-width: 1100px;
-  }
-
-  #hero-selection-list {
-    justify-content: center;
-  }
-
-  #hero-selection-list li {
-    height: 180px;
-    width: 300px;
-  }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }

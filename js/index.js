@@ -1,4 +1,5 @@
 import Barcode from './components/barcode.js';
+import Item from './components/item.js';
 import Navigation from './components/navigation.js';
 import { ComponentHandler } from './framework/componentHandler.js';
 
@@ -7,12 +8,15 @@ let componentHandler = new ComponentHandler();
 
 let barcode = new Barcode();
 let navigation = new Navigation();
+let item = new Item();
 
-barcode.setTemplate(document.getElementById('app-barcode'));
-navigation.setTemplate(document.getElementById('app-navigation'));
+barcode.setTemplate(document.getElementById(barcode.name));
+navigation.setTemplate(document.getElementById(navigation.name));
+item.setTemplate(document.getElementById(item.name));
 
 componentHandler.register(barcode);
 componentHandler.register(navigation);
+componentHandler.register(item);
 
 componentHandler.renderComponents();
 

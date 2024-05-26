@@ -1,0 +1,44 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  width: 200px;
+  height: 100%;
+  position: relative;
+}
+
+.item__picture {
+  height: 200px;
+  width: 100%;
+}
+
+.item__picture > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid var(--cream);
+  border-radius: 0.4rem;
+}
+
+.item__info__price {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.item__info {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+}
+
+.item-button {
+  margin-top: auto;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .item {
+    width: 100%;
+  }
+}
