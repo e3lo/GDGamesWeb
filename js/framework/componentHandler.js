@@ -7,11 +7,26 @@ export class ComponentHandler {
     this.componentList.push(component);
   }
 
-  renderComponents() {
+  renderComponents(scope) {
+    // Check if scope is a valid node (either DOCUMENT_NODE or ELEMENT_NODE)
+    if (
+      scope.nodeType !== Node.ELEMENT_NODE &&
+      scope.nodeType !== Node.DOCUMENT_NODE
+    ) {
+      return;
+    }
+
     this.componentList.forEach((component) => {
-      let elems = document.getElementsByTagName(component.name);
-      Array.from(elems).forEach((element) => {
+      let elems = scope.querySelectorAll(component.name);
+
+      elems.forEach((element) => {
         component.render(element);
+
+        // Recursively render components for each child node
+        // This allows nesting of components
+        element.childNodes.forEach((child) => {
+          this.renderComponents(child);
+        });
       });
     });
   }

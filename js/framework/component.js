@@ -1,7 +1,8 @@
 export class Component {
-  constructor(name) {
+  constructor(name, document) {
     this.name = name;
     this.props = {};
+    this.setTemplate(document.getElementById(this.name));
   }
 
   setTemplate(template) {

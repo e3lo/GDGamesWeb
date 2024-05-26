@@ -1,4 +1,5 @@
 import Barcode from './components/barcode.js';
+import CategorySection from './components/categorySection.js';
 import Item from './components/item.js';
 import Navigation from './components/navigation.js';
 import { ComponentHandler } from './framework/componentHandler.js';
@@ -6,19 +7,17 @@ import { ComponentHandler } from './framework/componentHandler.js';
 // Component Handling
 let componentHandler = new ComponentHandler();
 
-let barcode = new Barcode();
-let navigation = new Navigation();
-let item = new Item();
-
-barcode.setTemplate(document.getElementById(barcode.name));
-navigation.setTemplate(document.getElementById(navigation.name));
-item.setTemplate(document.getElementById(item.name));
+let barcode = new Barcode(document);
+let navigation = new Navigation(document);
+let item = new Item(document);
+let categorySection = new CategorySection(document);
 
 componentHandler.register(barcode);
 componentHandler.register(navigation);
 componentHandler.register(item);
+componentHandler.register(categorySection);
 
-componentHandler.renderComponents();
+componentHandler.renderComponents(document);
 
 // Handle Hero
 const heroList = document.getElementById('hero-list');

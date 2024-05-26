@@ -1,8 +1,8 @@
 import { Component } from '../framework/component.js';
 
 export default class Navigation extends Component {
-  constructor() {
-    super('app-navigation');
+  constructor(document) {
+    super('app-navigation', document);
 
     this.props = {
       active: 'string',

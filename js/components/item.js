@@ -1,8 +1,8 @@
 import { Component } from '../framework/component.js';
 
 export default class Item extends Component {
-  constructor() {
-    super('app-item');
+  constructor(document) {
+    super('app-item', document);
 
     this.props = {
       title: '',

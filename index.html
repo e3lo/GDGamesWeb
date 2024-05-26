@@ -97,51 +97,13 @@
               title="PC"
               type=""
               description="Peripherals, Games and PC Parts"
-              src="/assets/products/xbox.jpg"
+              src="/assets/products/pc.jpg"
             ></app-item>
           </ul>
         </div>
       </section>
-      <section>
-        <img />
-        <app-qr-style>GOD OF WAR</app-qr-style>
-        <div>
-          <h2>PLAYSTATION</h2>
-          <p>Home to many exclusive award winning games</p>
-        </div>
-        <button>Shop Category</button>
-        <!-- Grids -->
-        <div>
-          <div>
-            <strong>387+</strong>
-            <p>Games available</p>
-          </div>
 
-          <div>
-            <img />
-          </div>
-          <div>
-            <img />
-            <div>
-              <p>Limited Stock</p>
-              <b>PS5 Digital Edition</b>
-              <button>Shop Now</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Horzontal Scrolling -->
-        <ul>
-          <li>
-            <img />
-            <p>PS5 Physical/Digital Edition</p>
-            <b>Spider-man Remastered</b>
-            <p>Co-op, FPS</p>
-            <p>$89</p>
-            <button>View Item</button>
-          </li>
-        </ul>
-      </section>
+      <app-category-section></app-category-section>
     </main>
   </body>
 
@@ -190,5 +152,12 @@
       <button class="item-button">Shop Category</button>
     </li>
   </template>
+
+  <template id="app-category-section">
+    <section class="container">
+      <app-barcode body="GOD OF WAR"></app-barcode>
+      hi
+    </section></template
+  >
   <script type="module" src="js/index.js"></script>
 </html>

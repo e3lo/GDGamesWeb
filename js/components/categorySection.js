@@ -1,8 +1,8 @@
 import { Component } from '../framework/component.js';
 
-export default class Barcode extends Component {
+export default class CategorySection extends Component {
   constructor(document) {
-    super('app-barcode', document);
+    super('app-category-section', document);
 
     this.props = {
       body: '',
