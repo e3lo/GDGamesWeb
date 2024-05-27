@@ -4,6 +4,7 @@
   --dark: #171717;
   --cream: #fffbda;
   --green: #4ade80;
+  --cream30: rgba(255, 251, 218, 0.3);
 }
 
 * {
@@ -22,7 +23,8 @@ body {
   overflow-x: hidden;
 }
 
-button {
+button,
+.button {
   background-color: var(--cream);
   color: var(--dark);
   padding: 1em 2em;
@@ -49,6 +51,9 @@ button:hover {
 }
 
 /* Fonts */
+.GD__text--semibold {
+  font-weight: 700;
+}
 
 .GD__text--4xl {
   font-weight: 900;
@@ -122,6 +127,14 @@ button:hover {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+/* Form fields */
+.inputBox {
+  background-color: var(--cream30);
+  border: 1px solid var(--cream);
+  border-radius: 0.4rem;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
