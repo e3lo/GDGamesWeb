@@ -40,6 +40,14 @@ button:hover {
   cursor: pointer;
 }
 
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
 /* Fonts */
 
 .GD__text--4xl {
@@ -114,4 +122,14 @@ button:hover {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
 }

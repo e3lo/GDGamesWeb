@@ -5,10 +5,12 @@ export default class Item extends Component {
     super('app-item', document);
 
     this.props = {
+      id: '',
       title: '',
       type: '',
       description: '',
       src: '',
+      price: '',
     };
   }
 
@@ -20,6 +22,11 @@ export default class Item extends Component {
     // Removing type if empty
     if (this.props.type === '') {
       templateClone.querySelector("[-text = 'type']").style.display = 'none';
+    }
+
+    // Removing price if empty
+    if (this.props.price == null) {
+      templateClone.querySelector('.item__info__price').style.display = 'none';
     }
 
     return templateClone;

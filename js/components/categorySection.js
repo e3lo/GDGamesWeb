@@ -54,7 +54,9 @@ export default class CategorySection extends Component {
       element.setAttribute('title', item.title);
       element.setAttribute('type', item.productOptions[0].title);
       element.setAttribute('description', item.tags);
+      element.setAttribute('price', item.productOptions[0].price);
       element.setAttribute('src', item.productImg[0]);
+      element.setAttribute('cta', 'View Item');
       itemSection.appendChild(element);
     });
 
@@ -70,5 +72,6 @@ export default class CategorySection extends Component {
     node.style.background = backgroundStyle;
     node.style.backgroundSize = 'cover';
     node.style.backgroundPosition = 'center';
+    node.style.backgroundRepeat = 'no-repeat';
   }
 }
