@@ -121,7 +121,7 @@
   }
 
   .category-section__content {
-    padding: 2rem 0;
+    padding: 2rem 2rem;
   }
 
   .category-section__content--list {
@@ -152,14 +152,6 @@
     margin: 0 auto;
     justify-content: start;
     column-gap: 1rem;
-    padding: 0 0;
-  }
-
-  .category-collection {
-    margin: 0 auto;
-    justify-content: start;
-    column-gap: 1rem;
-    padding: 0 0;
   }
 
   .category-collection > * {
