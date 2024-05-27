@@ -104,7 +104,18 @@
         </div>
       </section>
 
-      <app-category-section></app-category-section>
+      <app-category-section
+        title="PLAYSTATION"
+        description="Home to the best exclusive and award winning games"
+        stat="387+"
+        statDescription="Games Available"
+        itemDescription="Limited Stock!"
+        itemTitle="PS5 Digital Edition"
+        items="0,1,2"
+        src1="/assets/banners/GoW.webp"
+        src2="/assets/decor/ps5Controller.jpg"
+        src3="/assets/products/spiderman.jpg"
+      ></app-category-section>
     </main>
   </body>
 
@@ -160,44 +171,29 @@
         <div class="container category-section__content">
           <app-barcode body="GOD OF WAR"></app-barcode>
           <div class="category-section__title">
-            <h2 class="GD__text--2xl">PLAYSTATION</h2>
-            <p class="">Home to many exclusive award winning games</p>
+            <h2 class="GD__text--2xl" -text="title">PLAYSTATION</h2>
+            <p -text="description">
+              Home to many exclusive award winning games
+            </p>
           </div>
           <button>Shop Category</button>
           <div class="category-section__bento">
             <div class="category-section__bento__stat bento">
-              <strong class="GD__text--2xl">387+</strong>
-              <p>Games available</p>
+              <strong class="GD__text--2xl" -text="stat">387+</strong>
+              <p -text="statDescription">Games available</p>
             </div>
             <div class="category-section__bento__img bento"></div>
             <div class="category-section__bento__item bento">
-              <p class="GD__text--sm">Limited Stock</p>
-              <strong class="GD__text--lg">PS5 Digital Edition</strong>
+              <p class="GD__text--sm" -text="itemDescription">Limited Stock</p>
+              <strong class="GD__text--lg" -text="itemTitle"
+                >PS5 Digital Edition</strong
+              >
               <button class="bento__button">Shop Now</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="category-collection">
-        <app-item
-          title="PC"
-          type=""
-          description="Peripherals, Games and PC Parts"
-          src="/assets/products/pc.jpg"
-        ></app-item>
-        <app-item
-          title="PC"
-          type=""
-          description="Peripherals, Games and PC Parts"
-          src="/assets/products/pc.jpg"
-        ></app-item>
-        <app-item
-          title="PC"
-          type=""
-          description="Peripherals, Games and PC Parts"
-          src="/assets/products/pc.jpg"
-        ></app-item>
-      </div>
+      <div class="category-collection"></div>
     </section>
   </template>
   <script type="module" src="js/index.js"></script>
