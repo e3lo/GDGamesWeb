@@ -29,7 +29,7 @@
   <body>
     <main>
       <app-navigation></app-navigation>
-      <app-hero></app-hero>
+      <app-hero id="playstation"></app-hero>
       <app-featured></app-featured>
 
       <app-type-overview
@@ -125,24 +125,16 @@
   <template id="app-hero">
     <section class="hero">
       <div class="mobile">
-        <ol class="hero__breadcrumbs">
-          <li class="hero__breadcrumbs--link">Home</li>
-          <li>></li>
-          <li>Playstation</li>
-        </ol>
+        <div class="hero__breadcrumbs" id="breadcrumbs1"></div>
       </div>
 
       <div class="hero__content">
         <div class="hero__content__container">
           <div class="desktop">
-            <ol class="hero__breadcrumbs">
-              <li class="hero__breadcrumbs--link">Home</li>
-              <li>></li>
-              <li>Playstation</li>
-            </ol>
+            <div class="hero__breadcrumbs" id="breadcrumbs2"></div>
           </div>
-          <h1 class="hero__title">PLAYSTATION</h1>
-          <p>Home to many exclusive award winning games</p>
+          <h1 class="hero__title" -text="title">PLAYSTATION</h1>
+          <p -text="body">Home to many exclusive award winning games</p>
         </div>
       </div>
       <app-barcode body="GOD OF WAR"></app-barcode>

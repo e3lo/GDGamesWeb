@@ -12,6 +12,7 @@
   background-size: cover;
   outline: 2px solid var(--dark);
   outline-offset: -1px;
+  padding-bottom: 8rem;
 }
 
 .type-section__content {
@@ -52,6 +53,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   gap: 1rem;
+  width: 100%;
 }
 
 .bento {
@@ -99,6 +101,7 @@
 }
 
 .type-collection {
+  margin-top: -8rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -118,7 +121,7 @@
   }
 
   .type-section__content {
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
   }
 
   .type-section__content--list {
@@ -148,11 +151,16 @@
 
   .type-collection {
     margin: 0 auto;
+    margin-top: -8rem;
     justify-content: start;
     column-gap: 1rem;
   }
 
   .type-collection > * {
     flex: 1;
+  }
+
+  .type-section__bento {
+    width: 50%;
   }
 }
