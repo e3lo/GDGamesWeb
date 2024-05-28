@@ -53,10 +53,21 @@ export default class Item extends Component {
     const item = event.srcElement.parentNode.parentNode;
     const id = item.getAttribute('id');
 
-    if (isNaN(id)) {
-      window.location.href = `./html/pages/section.html?id=${id}`;
+    console.log(window.location.href);
+
+    // For index.html
+    if (window.location.href.includes('index.html')) {
+      if (isNaN(id)) {
+        window.location.href = `./html/pages/section.html?id=${id}`;
+      } else {
+        window.location.href = `./html/pages/item.html?id=${id}`;
+      }
     } else {
-      window.location.href = `./html/pages/item.html?id=${id}`;
+      if (isNaN(id)) {
+        window.location.href = `./section.html?id=${id}`;
+      } else {
+        window.location.href = `./item.html?id=${id}`;
+      }
     }
   }
 }
