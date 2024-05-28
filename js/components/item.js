@@ -1,4 +1,5 @@
 import { Component } from '../framework/component.js';
+import { getItemById } from '../framework/itemHandler.js';
 
 export default class Item extends Component {
   constructor(document) {
@@ -21,8 +22,17 @@ export default class Item extends Component {
 
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
-    // Updating images
-    templateClone.querySelector('img').src = this.props.src;
+
+    const itemData = getItemById(parseInt(this.props.id));
+
+    if (itemData != null) {
+      this.props.title = itemData.title;
+      this.props.type = itemData.productOptions[0].title;
+      this.props.description = itemData.tags;
+      this.props.src = '../..' + itemData.productImg[0];
+      this.props.price = itemData.productOptions[0].price;
+      super.setTextBinding(templateClone);
+    }
 
     // Removing type if empty
     if (this.props.type === '') {
@@ -34,6 +44,8 @@ export default class Item extends Component {
       templateClone.querySelector('.item__info__price').style.display = 'none';
     }
 
+    // Updating images
+    templateClone.querySelector('img').src = this.props.src;
     return templateClone;
   }
 

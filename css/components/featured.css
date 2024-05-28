@@ -24,3 +24,13 @@
   max-width: 300px;
   text-align: center;
 }
+
+@media (min-width: 640px) {
+  .featured__title__text {
+    font-size: 2rem;
+  }
+
+  .featured__title > p {
+    max-width: 400px;
+  }
+}
