@@ -58,6 +58,7 @@
       </section>
       <section class="item-list container">
         <form class="filter-form">
+          <!-- Filter Section -->
           <div class="filter-form__section">
             <strong class="GD__text--lg">Filter</strong>
             <label for="onSale" class="input-container">
@@ -69,6 +70,61 @@
                 class="checkbox"
               />
               <span class="checkbox--new"></span>
+            </label>
+            <label for="limitedEdition" class="input-container">
+              Limited Edition
+              <input
+                type="checkbox"
+                id="limitedEdition"
+                name="limitedEdition"
+                class="checkbox"
+              />
+              <span class="checkbox--new"></span>
+            </label>
+            <label for="newStock" class="input-container">
+              New Stock
+              <input
+                type="checkbox"
+                id="newStock"
+                name="newStock"
+                class="checkbox"
+              />
+              <span class="checkbox--new"></span>
+            </label>
+          </div>
+
+          <!-- Sort -->
+          <div class="filter-form__section">
+            <strong class="GD__text--lg">Sort</strong>
+            <label for="recommended" class="input-container">
+              Recommended
+              <input
+                type="radio"
+                id="recommended"
+                name="filter"
+                class="radio"
+              />
+              <span class="radio--new"></span>
+            </label>
+            <label for="price" class="input-container">
+              Price
+              <input type="radio" id="price" name="filter" class="radio" />
+              <span class="radio--new"></span>
+            </label>
+            <label for="alphabetical" class="input-container">
+              Alphabetical
+              <input
+                type="radio"
+                id="alphabetical"
+                name="filter"
+                class="radio"
+              />
+              <span class="radio--new"></span>
+            </label>
+            <label for="discount" class="input-container">
+              Discount
+              <input type="radio" id="discount" name="filter" class="radio" />
+              <span class="radio--new"></span>
             </label>
           </div>
         </form>
