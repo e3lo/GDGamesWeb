@@ -42,7 +42,7 @@ const pageInfo = {
     ],
   },
 
-  searchPlaystation: {
+  search_playstation: {
     hero: {
       routingPath: [
         { name: 'home', url: '../../index.html' },
@@ -53,6 +53,7 @@ const pageInfo = {
         body: 'GOD OF WAR',
       },
     },
+    items: [[0, 0, 0, 0, 0], [0, 0, 0], [0, 0, 1, 0], [1], [0, 0]],
   },
 };
 

@@ -32,5 +32,25 @@ export class ComponentHandler {
     });
   }
 
+  renderIndividualComponent(name, scope) {
+    this.componentList.forEach((component) => {
+      if (component.name != name) {
+        return;
+      }
+
+      let elems = scope.querySelectorAll(component.name);
+
+      elems.forEach((element) => {
+        component.render(element);
+
+        // Recursively render components for each child node
+        // This allows nesting of components
+        element.childNodes.forEach((child) => {
+          this.renderComponents(child);
+        });
+      });
+    });
+  }
+
   handleEvents() {}
 }
