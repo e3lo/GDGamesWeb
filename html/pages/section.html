@@ -112,14 +112,26 @@
 
   <template id="app-hero">
     <section class="hero">
-      <ol class="hero__breadcrumbs">
-        <li class="hero__breadcrumbs--link">Home</li>
-        <li>></li>
-        <li>Playstation</li>
-      </ol>
+      <div class="mobile">
+        <ol class="hero__breadcrumbs">
+          <li class="hero__breadcrumbs--link">Home</li>
+          <li>></li>
+          <li>Playstation</li>
+        </ol>
+      </div>
+
       <div class="hero__content">
-        <h1 class="GD__text--2xl">PLAYSTATION</h1>
-        <p>Home to many exclusive award winning games</p>
+        <div class="hero__content__container">
+          <div class="desktop">
+            <ol class="hero__breadcrumbs">
+              <li class="hero__breadcrumbs--link">Home</li>
+              <li>></li>
+              <li>Playstation</li>
+            </ol>
+          </div>
+          <h1 class="GD__text--2xl">PLAYSTATION</h1>
+          <p>Home to many exclusive award winning games</p>
+        </div>
       </div>
       <app-barcode body="GOD OF WAR"></app-barcode>
     </section>
