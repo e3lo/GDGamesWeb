@@ -12,9 +12,16 @@ let navigation = new Navigation(document);
 let item = new Item(document);
 let footer = new Footer(document);
 
-componentHandler.register(barcode);
-componentHandler.register(navigation);
-componentHandler.register(item);
-componentHandler.register(footer);
+componentHandler
+  .register(barcode)
+  .register(navigation)
+  .register(item)
+  .register(footer);
 
 componentHandler.renderComponents(document);
+
+// Rendering information
+const currentUrl = new URL(window.location.href);
+const urlParams = new URLSearchParams(currentUrl.search);
+const id = urlParams.get('id');
+const type = urlParams.get('type');

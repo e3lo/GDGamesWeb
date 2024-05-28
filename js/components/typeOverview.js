@@ -8,6 +8,7 @@ export default class TypeOverview extends Component {
     this.props = {
       id: '',
       barcodeText: '',
+      type: '',
       title: '',
       description: '',
       src1: '',
@@ -79,7 +80,7 @@ export default class TypeOverview extends Component {
         .parentNode;
     console.log(item);
     const id = item.getAttribute('id');
-    const type = item.getAttribute('type');
+    const type = this.props.type;
 
     window.location.href = `./search.html?id=${id}&type=${type}`;
   }
