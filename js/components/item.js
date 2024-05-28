@@ -31,6 +31,7 @@ export default class Item extends Component {
       this.props.description = itemData.tags;
       this.props.src = '../..' + itemData.productImg[0];
       this.props.price = itemData.productOptions[0].price;
+      this.props.cta = itemData.cta;
       super.setTextBinding(templateClone);
     }
 

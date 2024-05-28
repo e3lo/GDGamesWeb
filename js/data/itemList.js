@@ -7,6 +7,7 @@ const itemList = [
     decor: 'Critically Acclaimed',
     bgImg: '/assets/banners/GoW.webp',
     tags: 'Co-op, FPS',
+    cta: 'View Item',
     productImg: ['/assets/products/GoW.webp'],
     productOptions: [
       {
@@ -42,6 +43,7 @@ const itemList = [
     decor: 'Critically Acclaimed',
     bgImg: '/assets/banners/GoW.webp',
     tags: 'Co-op, FPS',
+    cta: 'View Item',
     productImg: ['/assets/products/GoW.webp'],
     productOptions: [
       {
