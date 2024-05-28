@@ -31,11 +31,16 @@
       <section class="search-bar">
         <p class="search-bar__hint mobile">Scroll >></p>
         <ul class="search-bar__categories">
-          <li class="search-bar__categories--active">Action</li>
-          <li>Adventure</li>
-          <li>Multiplayer</li>
-          <li>Story</li>
-          <li>Casual</li>
+          <li
+            onclick="onCategoryClick(0)"
+            class="search-bar__categories--active"
+          >
+            Action
+          </li>
+          <li onclick="onCategoryClick(1)">Adventure</li>
+          <li onclick="onCategoryClick(2)">Multiplayer</li>
+          <li onclick="onCategoryClick(3)">Story</li>
+          <li onclick="onCategoryClick(4)">Casual</li>
         </ul>
 
         <div class="search-bar__search">
@@ -103,6 +108,7 @@
                 id="recommended"
                 name="filter"
                 class="radio"
+                checked="checked"
               />
               <span class="radio--new"></span>
             </label>
@@ -236,5 +242,5 @@
       <app-barcode body="GOD OF WAR"></app-barcode>
     </section>
   </template>
-  <script type="module" src="../../js/pages/section.js"></script>
+  <script type="module" src="../../js/pages/search.js"></script>
 </html>

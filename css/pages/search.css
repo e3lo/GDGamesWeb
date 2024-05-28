@@ -27,6 +27,10 @@
   padding: 0.5rem 2rem;
   overflow-y: visible;
   z-index: 10;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  border-bottom: 4px solid transparent;
 }
 
 .search-bar__categories--active {
@@ -141,7 +145,7 @@
 }
 
 @media (min-width: 1280px) {
-  .item-list {
+  .item-list__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }

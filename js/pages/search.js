@@ -28,3 +28,27 @@ const currentUrl = new URL(window.location.href);
 const urlParams = new URLSearchParams(currentUrl.search);
 const id = urlParams.get('id');
 const type = urlParams.get('type');
+
+// Handling Category Logic
+let activeCategory = 0;
+
+function onCategoryClick(index) {
+  activeCategory = index;
+
+  renderCategories();
+}
+
+function renderCategories() {
+  const navList = document.querySelector('.search-bar__categories');
+  console.log(navList);
+  Array.from(navList.children).forEach((value, key) => {
+    console.log(value);
+    if (key == activeCategory) {
+      value.classList.add('search-bar__categories--active');
+    } else {
+      value.classList.remove('search-bar__categories--active');
+    }
+  });
+}
+
+globalThis.onCategoryClick = onCategoryClick;
