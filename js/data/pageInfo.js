@@ -41,6 +41,19 @@ const pageInfo = {
       },
     ],
   },
+
+  searchPlaystation: {
+    hero: {
+      routingPath: [
+        { name: 'home', url: '../../index.html' },
+        { name: 'playstation', url: './section.html?id=playstation' },
+        { name: 'search', url: '' },
+      ],
+      barcode: {
+        body: 'GOD OF WAR',
+      },
+    },
+  },
 };
 
 export default pageInfo;

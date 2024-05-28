@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Page Stylesheet -->
-    <link rel="stylesheet" href="../../css/pages/section.css" />
+    <link rel="stylesheet" href="../../css/pages/search.css" />
 
     <!-- Component Stylesheets -->
     <link rel="stylesheet" href="../../css/components/barcode.css" />
     <link rel="stylesheet" href="../../css/components/navigation.css" />
     <link rel="stylesheet" href="../../css/components/item.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
+    <link rel="stylesheet" href="../../css/components/hero.css" />
 
     <!-- Google Icons -->
     <link
@@ -26,7 +27,27 @@
   <body>
     <main>
       <app-navigation></app-navigation>
+      <app-hero id="searchPlaystation"></app-hero>
+      <section class="search-bar">
+        <p class="search-bar__hint mobile">Scroll >></p>
+        <ul class="search-bar__categories">
+          <li class="search-bar__categories--active">Action</li>
+          <li>Adventure</li>
+          <li>Multiplayer</li>
+          <li>Story</li>
+          <li>Casual</li>
+        </ul>
 
+        <div class="search-bar__search">
+          <div class="mobile search-bar__search__button">Filter/Search</div>
+        </div>
+      </section>
+      <section class="item-list" id="itemList">
+        <app-item id="1"></app-item>
+        <app-item id="1"></app-item>
+        <app-item id="1"></app-item>
+        <app-item id="1"></app-item>
+      </section>
       <app-footer></app-footer>
     </main>
   </body>
@@ -107,6 +128,25 @@
         </div>
       </div>
     </footer>
+  </template>
+
+  <template id="app-hero">
+    <section class="hero">
+      <div class="mobile">
+        <div class="hero__breadcrumbs" id="breadcrumbs1"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__content__container">
+          <div class="desktop">
+            <div class="hero__breadcrumbs" id="breadcrumbs2"></div>
+          </div>
+          <h1 class="hero__title" -text="title">PLAYSTATION</h1>
+          <p -text="body">Home to many exclusive award winning games</p>
+        </div>
+      </div>
+      <app-barcode body="GOD OF WAR"></app-barcode>
+    </section>
   </template>
   <script type="module" src="../../js/pages/section.js"></script>
 </html>
