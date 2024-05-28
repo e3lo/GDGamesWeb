@@ -9,6 +9,10 @@ const pageInfo = {
         body: 'GOD OF WAR',
       },
     },
+
+    featured: {
+      collection: [0, 1, 1],
+    },
   },
 };
 
