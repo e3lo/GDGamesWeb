@@ -35,11 +35,11 @@ export default class Navigation extends Component {
 
     this.links.map((value) => {
       let itemDesktop = document.createElement('li');
-      itemDesktop.setAttribute('onclick', `onLinkClick('${value.link}')`);
+      itemDesktop.setAttribute('onclick', `onLinkClick('${value.name}')`);
       itemDesktop.innerText = value.name;
 
       let itemMobile = document.createElement('li');
-      itemMobile.setAttribute('onclick', `onLinkClick('${value.link}')`);
+      itemMobile.setAttribute('onclick', `onLinkClick('${value.name}')`);
       itemMobile.innerText = value.name;
 
       navItems.appendChild(itemDesktop);
@@ -49,8 +49,18 @@ export default class Navigation extends Component {
     return templateClone;
   }
 
-  onLinkClick(link) {
-    window.location.href = link;
+  onLinkClick(name) {
+    if (window.location.href.includes('index.html')) {
+      this.links.map((value) => {
+        value.name == name ? (window.location.href = value.link) : '';
+      });
+    } else {
+      this.links.map((value) => {
+        value.name == name
+          ? (window.location.href = '/../..' + value.link)
+          : '';
+      });
+    }
   }
 
   onMobileNavClick(e) {

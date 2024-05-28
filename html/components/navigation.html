@@ -1,7 +1,9 @@
 <template id="app-navigation">
   <nav class="nav">
     <div class="nav__bar">
-      <div class="GD__text--logo">GD GAMES</div>
+      <div class="GD__text--logo clickable" onclick="onLinkClick('Home')">
+        GD GAMES
+      </div>
       <ul class="nav__links"></ul>
       <span class="GD__icon nav__menu" onclick="onMobileNavClick(event)"
         >menu</span

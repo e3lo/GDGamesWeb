@@ -1,0 +1,28 @@
+<template id="app-type-overview">
+  <section class="type-section">
+    <div class="type-section__bg">
+      <div class="container type-section__content">
+        <app-barcode body="GOD OF WAR"></app-barcode>
+        <div class="type-section__content--list">
+          <div class="type-section__content--title">
+            <div class="type-section__title">
+              <h2 class="GD__text--2xl" -text="title">PLAYSTATION</h2>
+              <p -text="description">
+                Home to many exclusive award winning games
+              </p>
+            </div>
+          </div>
+          <div class="type-section__bento">
+            <div class="type-section__bento__stat bento"></div>
+            <div class="type-section__bento__quote bento" -text="quote"></div>
+            <div class="type-section__bento__item bento"></div>
+            <button class="bento__button" onclick="onSeeCollection(event)">
+              See Collection
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="type-collection container"></div>
+  </section>
+</template>

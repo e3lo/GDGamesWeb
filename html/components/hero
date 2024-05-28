@@ -1,0 +1,18 @@
+<template id="app-hero">
+  <section class="hero">
+    <div class="mobile">
+      <div class="hero__breadcrumbs" id="breadcrumbs1"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__content__container">
+        <div class="desktop">
+          <div class="hero__breadcrumbs" id="breadcrumbs2"></div>
+        </div>
+        <h1 class="hero__title" -text="title">PLAYSTATION</h1>
+        <p -text="body">Home to many exclusive award winning games</p>
+      </div>
+    </div>
+    <app-barcode body="GOD OF WAR"></app-barcode>
+  </section>
+</template>

@@ -47,6 +47,10 @@ button:hover {
   cursor: pointer;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .mobile {
   display: block;
 }
