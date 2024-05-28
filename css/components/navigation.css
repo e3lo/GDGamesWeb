@@ -29,6 +29,10 @@
   display: none;
 }
 
+.nav__links > li {
+  cursor: pointer;
+}
+
 .nav__menu {
   display: block;
 }
@@ -43,6 +47,7 @@
 
 .nav__links--mobile > li {
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 #nav__popup {

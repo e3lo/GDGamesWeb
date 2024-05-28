@@ -12,19 +12,45 @@ export default class Navigation extends Component {
 
     this.links = [
       { name: 'Home', link: '/index.html' },
-      { name: 'Xbox', link: '/html/pages/xbox.html' },
-      { name: 'PS5', link: '/html/pages/ps5.html' },
+      { name: 'Xbox', link: '/html/pages/section.html?id=xbox' },
+      { name: 'PS5', link: '/html/pages/section.html?id=playstation' },
+      { name: 'My cart', link: '/html/pages/cart.html' },
     ];
 
     this.onMobileNavClick = this.onMobileNavClick.bind(this);
+    this.onLinkClick = this.onLinkClick.bind(this);
 
     // Attach the bound method to globalThis
     globalThis.onMobileNavClick = this.onMobileNavClick;
+    globalThis.onLinkClick = this.onLinkClick;
   }
 
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
+
+    const navItems = templateClone.querySelector('.nav__links');
+    const navItemsMobile = templateClone.querySelector('.nav__links--mobile');
+
+    console.log(navItems);
+
+    this.links.map((value) => {
+      let itemDesktop = document.createElement('li');
+      itemDesktop.setAttribute('onclick', `onLinkClick('${value.link}')`);
+      itemDesktop.innerText = value.name;
+
+      let itemMobile = document.createElement('li');
+      itemMobile.setAttribute('onclick', `onLinkClick('${value.link}')`);
+      itemMobile.innerText = value.name;
+
+      navItems.appendChild(itemDesktop);
+      navItemsMobile.appendChild(itemMobile);
+    });
+
     return templateClone;
+  }
+
+  onLinkClick(link) {
+    window.location.href = link;
   }
 
   onMobileNavClick(e) {
