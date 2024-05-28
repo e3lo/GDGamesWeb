@@ -28,17 +28,17 @@ const heroItems = [
   {
     title: 'FINAL FANTASY VII',
     img: '/assets/banners/FFVII.png',
-    link: '/page/products.html?1',
+    link: './html/pages/item.html?id=1',
   },
   {
     title: 'NieR: Automata',
     img: '/assets/banners/nier.jpg',
-    link: '/page/products.html?2',
+    link: './html/pages/item.html?id=2',
   },
   {
     title: 'Silksong',
     img: '/assets/banners/silksong.jpg',
-    link: '/page/products.html?3',
+    link: './html/pages/item.html?id=3',
   },
 ];
 let heroActive = 0;

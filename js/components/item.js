@@ -12,6 +12,11 @@ export default class Item extends Component {
       src: '',
       price: '',
     };
+
+    this.onItemClick = this.onItemClick.bind(this);
+
+    // Attach the bound method to globalThis
+    globalThis.onItemClick = this.onItemClick;
   }
 
   createElement(parentNode) {
@@ -30,5 +35,16 @@ export default class Item extends Component {
     }
 
     return templateClone;
+  }
+
+  onItemClick(event) {
+    const item = event.srcElement.parentNode.parentNode;
+    const id = item.getAttribute('id');
+
+    if (isNaN(id)) {
+      window.location.href = `./html/pages/section.html?id=${id}`;
+    } else {
+      window.location.href = `./html/pages/item.html?id=${id}`;
+    }
   }
 }
