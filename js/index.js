@@ -14,11 +14,12 @@ let item = new Item(document);
 let categorySection = new CategorySection(document);
 let footer = new Footer(document);
 
-componentHandler.register(barcode);
-componentHandler.register(navigation);
-componentHandler.register(item);
-componentHandler.register(categorySection);
-componentHandler.register(footer);
+componentHandler
+  .register(barcode)
+  .register(navigation)
+  .register(item)
+  .register(categorySection)
+  .register(footer);
 
 componentHandler.renderComponents(document);
 

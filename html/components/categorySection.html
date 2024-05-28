@@ -10,9 +10,15 @@
               <p -text="description">
                 Home to many exclusive award winning games
               </p>
-              <button class="desktop">Shop Category</button>
+              <button class="desktop" onclick="onSeeCollection(event)">
+                Shop Category
+              </button>
             </div>
-            <button class="mobile">Shop Category</button>
+            <div>
+              <button class="mobile" onclick="onSeeCollection(event)">
+                Shop Category
+              </button>
+            </div>
           </div>
           <div class="category-section__bento">
             <div class="category-section__bento__stat bento">
@@ -25,7 +31,9 @@
               <strong class="GD__text--lg" -text="itemTitle"
                 >PS5 Digital Edition</strong
               >
-              <button class="bento__button">Shop Now</button>
+              <button class="bento__button" onclick="onSeeFeatured(event)">
+                Shop Now
+              </button>
             </div>
           </div>
         </div>

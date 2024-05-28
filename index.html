@@ -110,12 +110,14 @@
 
       <!-- Category Sections -->
       <app-category-section
+        id="playstation"
         title="PLAYSTATION"
         description="Home to the best exclusive and award winning games"
         stat="387+"
         statDescription="Games Available"
         itemDescription="Limited Stock!"
         itemTitle="PS5 Digital Edition"
+        featureId="0"
         items="0,1,0"
         src1="/assets/banners/GoW.webp"
         src2="/assets/decor/ps5Controller.jpg"
@@ -123,12 +125,14 @@
       ></app-category-section>
 
       <app-category-section
+        id="xbox"
         title="XBOX"
         description="Home to the best exclusive and award winning games"
         stat="387+"
         statDescription="Games Available"
         itemDescription="Limited Stock!"
         itemTitle="PS5 Digital Edition"
+        featureId="0"
         items="0,0,0"
         src1="/assets/banners/GoW.webp"
         src2="/assets/decor/ps5Controller.jpg"
@@ -193,9 +197,15 @@
                 <p -text="description">
                   Home to many exclusive award winning games
                 </p>
-                <button class="desktop">Shop Category</button>
+                <button class="desktop" onclick="onSeeCollection(event)">
+                  Shop Category
+                </button>
               </div>
-              <button class="mobile">Shop Category</button>
+              <div>
+                <button class="mobile" onclick="onSeeCollection(event)">
+                  Shop Category
+                </button>
+              </div>
             </div>
             <div class="category-section__bento">
               <div class="category-section__bento__stat bento">
@@ -210,7 +220,9 @@
                 <strong class="GD__text--lg" -text="itemTitle"
                   >PS5 Digital Edition</strong
                 >
-                <button class="bento__button">Shop Now</button>
+                <button class="bento__button" onclick="onSeeFeatured(event)">
+                  Shop Now
+                </button>
               </div>
             </div>
           </div>

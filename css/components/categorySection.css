@@ -52,6 +52,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
+  width: 100%;
 }
 
 .bento {
@@ -157,5 +158,9 @@
 
   .category-collection > * {
     flex: 1;
+  }
+
+  .category-section__bento {
+    width: 50%;
   }
 }

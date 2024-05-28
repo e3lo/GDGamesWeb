@@ -18,6 +18,12 @@ export default class CategorySection extends Component {
       src3: '',
       items: '',
     };
+
+    this.onSeeCollection = this.onSeeCollection.bind(this);
+    this.onSeeFeatured = this.onSeeFeatured.bind(this);
+    // Attach the bound method to globalThis
+    globalThis.onSeeCollection = this.onSeeCollection;
+    globalThis.onSeeFeatured = this.onSeeFeatured;
   }
 
   createElement(parentNode) {
@@ -65,13 +71,19 @@ export default class CategorySection extends Component {
   }
 
   onSeeCollection(event) {
-    const item = event.srcElement.parentNode.parentNode;
+    const item =
+      event.srcElement.parentNode.parentNode.parentNode.parentNode.parentNode
+        .parentNode.parentNode;
     const id = item.getAttribute('id');
 
-    if (isNaN(id)) {
-      window.location.href = `./html/pages/section.html?id=${id}`;
-    } else {
-      window.location.href = `./html/pages/item.html?id=${id}`;
-    }
+    window.location.href = `./html/pages/section.html?id=${id}`;
+  }
+
+  onSeeFeatured(event) {
+    const item =
+      event.srcElement.parentNode.parentNode.parentNode.parentNode.parentNode
+        .parentNode.parentNode;
+    const id = item.getAttribute('featureId');
+    window.location.href = `./html/pages/item.html?id=${id}`;
   }
 }
