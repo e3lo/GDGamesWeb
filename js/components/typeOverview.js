@@ -1,47 +1,42 @@
 import { Component } from '../framework/component.js';
-import { getItemById } from '../framework/itemHandler.js';
 
-export default class CategorySection extends Component {
+export default class TypeOverview extends Component {
   constructor(document) {
-    super('app-category-section', document);
+    super('app-type-overview', document);
 
     this.props = {
       id: '',
+      barcodeText: '',
       title: '',
       description: '',
-      stat: '',
-      statDescription: '',
-      itemDescription: '',
-      itemTitle: '',
       src1: '',
       src2: '',
-      src3: '',
+      quote: '',
       items: '',
     };
+
+    this.onSeeCollection = this.onSeeCollection.bind(this);
+
+    // Attach the bound method to globalThis
+    globalThis.onSeeCollection = this.onSeeCollection;
   }
 
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
 
     this.setImage(
-      templateClone.querySelector('.category-section__bg'),
+      templateClone.querySelector('.type-section__bg'),
       `linear-gradient(rgba(48, 48, 48, 0.4), rgba(23, 23, 23, 1)),
     url(${this.props.src1})`
     );
 
     this.setImage(
-      templateClone.querySelector('.category-section__bento__stat'),
-      `linear-gradient(rgba(23, 23, 23, 0.6), rgba(23, 23, 23, 0.6)),
-      url(${this.props.src2})`
-    );
-
-    this.setImage(
-      templateClone.querySelector('.category-section__bento__img'),
-      `url(${this.props.src3})`
+      templateClone.querySelector('.type-section__bento__stat'),
+      `url(${this.props.src2})`
     );
 
     // Setting the item list
-    const itemSection = templateClone.querySelector('.category-collection');
+    const itemSection = templateClone.querySelector('.type-collection');
     const items = this.props.items.split(',');
     items.forEach((value) => {
       const element = document.createElement('app-item');
@@ -65,13 +60,13 @@ export default class CategorySection extends Component {
   }
 
   onSeeCollection(event) {
-    const item = event.srcElement.parentNode.parentNode;
+    const item =
+      event.srcElement.parentNode.parentNode.parentNode.parentNode.parentNode
+        .parentNode;
+    console.log(item);
     const id = item.getAttribute('id');
+    const type = item.getAttribute('type');
 
-    if (isNaN(id)) {
-      window.location.href = `./html/pages/section.html?id=${id}`;
-    } else {
-      window.location.href = `./html/pages/item.html?id=${id}`;
-    }
+    window.location.href = `./search.html?id=${id}&type=${type}`;
   }
 }

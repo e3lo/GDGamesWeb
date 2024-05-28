@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../css/components/footer.css" />
     <link rel="stylesheet" href="../../css/components/hero.css" />
     <link rel="stylesheet" href="../../css/components/featured.css" />
+    <link rel="stylesheet" href="../../css/components/typeOverview.css" />
 
     <!-- Google Icons -->
     <link
@@ -30,6 +31,17 @@
       <app-navigation></app-navigation>
       <app-hero></app-hero>
       <app-featured></app-featured>
+
+      <app-type-overview
+        id="playstation"
+        type="controllers"
+        title="XBOX"
+        description="Home to the best exclusive and award winning games"
+        items="0,0,0"
+        src1="/assets/banners/GoW.webp"
+        src2="/assets/decor/ps5Controller.jpg"
+        quote="Try out the new 2024 wireless controllers! It’s a lot better than you think </br> </br> - GD Games"
+      ></app-type-overview>
       <app-footer></app-footer>
     </main>
   </body>
@@ -144,10 +156,39 @@
         <p>The hottest items! Limited stock so don't miss out</p>
       </div>
       <div class="item-collection container">
-        <app-item id="0"></app-item>
+        <app-item id="1"></app-item>
         <app-item id="1"></app-item>
         <app-item id="0"></app-item>
       </div>
+    </section>
+  </template>
+
+  <template id="app-type-overview">
+    <section class="type-section">
+      <div class="type-section__bg">
+        <div class="container type-section__content">
+          <app-barcode body="GOD OF WAR"></app-barcode>
+          <div class="type-section__content--list">
+            <div class="type-section__content--title">
+              <div class="type-section__title">
+                <h2 class="GD__text--2xl" -text="title">PLAYSTATION</h2>
+                <p -text="description">
+                  Home to many exclusive award winning games
+                </p>
+              </div>
+            </div>
+            <div class="type-section__bento">
+              <div class="type-section__bento__stat bento"></div>
+              <div class="type-section__bento__quote bento" -text="quote"></div>
+              <div class="type-section__bento__item bento"></div>
+              <button class="bento__button" onclick="onSeeCollection(event)">
+                See Collection
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="type-collection container"></div>
     </section>
   </template>
   <script type="module" src="../../js/pages/section.js"></script>

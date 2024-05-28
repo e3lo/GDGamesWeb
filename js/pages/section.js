@@ -4,6 +4,7 @@ import Footer from '../components/footer.js';
 import Hero from '../components/hero.js';
 import Item from '../components/item.js';
 import Navigation from '../components/navigation.js';
+import TypeOverview from '../components/typeOverview.js';
 import { ComponentHandler } from '../framework/componentHandler.js';
 
 // Component Handling
@@ -15,6 +16,7 @@ let item = new Item(document);
 let footer = new Footer(document);
 let hero = new Hero(document);
 let featured = new Featured(document);
+let typeOverview = new TypeOverview(document);
 
 componentHandler
   .register(barcode)
@@ -22,7 +24,8 @@ componentHandler
   .register(item)
   .register(footer)
   .register(hero)
-  .register(featured);
+  .register(featured)
+  .register(typeOverview);
 
 // Rendering information
 const currentUrl = new URL(window.location.href);
