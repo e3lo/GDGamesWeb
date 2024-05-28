@@ -5,6 +5,7 @@
   --cream: #fffbda;
   --green: #4ade80;
   --cream30: rgba(255, 251, 218, 0.3);
+  --cream10: rgba(255, 251, 218, 0.1);
 }
 
 * {
@@ -158,4 +159,73 @@ button:hover {
   .item-collection {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Input fields */
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox--new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--cream10);
+  border: 1px solid var(--cream);
+  border-radius: 0.4rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input-container {
+  position: relative;
+  padding-left: 3rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-container:hover input ~ .checkbox--new {
+  background-color: var(--cream30);
+}
+
+.checkbox:checked ~ .checkbox--new {
+  background-color: var(--cream10);
+  border: 1px solid var(--cream);
+  border-radius: 0.4rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.checkbox--new:after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 0rem;
+  height: 0rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input-container input:checked ~ .checkbox--new:after {
+  display: block;
+  left: 0.45rem;
+  top: 0.45rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.input-container .checkbox--new:after {
+  background-color: var(--green);
+  border-radius: 0.4rem;
 }

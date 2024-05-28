@@ -39,15 +39,47 @@
         </ul>
 
         <div class="search-bar__search">
-          <div class="mobile search-bar__search__button">Filter/Search</div>
+          <div class="search-bar__search__button">Filter/Search</div>
+          <form class="search-bar__search__form">
+            <div class="search-bar__search__form__input">
+              <label for="search">Search</label>
+              <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Search"
+                class="search-bar__search__field"
+              />
+            </div>
+
+            <input type="submit" value="Submit" class="button" />
+          </form>
         </div>
       </section>
-      <section class="item-list" id="itemList">
-        <app-item id="1"></app-item>
-        <app-item id="1"></app-item>
-        <app-item id="1"></app-item>
-        <app-item id="1"></app-item>
+      <section class="item-list container">
+        <form class="filter-form">
+          <div class="filter-form__section">
+            <strong class="GD__text--lg">Filter</strong>
+            <label for="onSale" class="input-container">
+              On Sale
+              <input
+                type="checkbox"
+                id="onSale"
+                name="onSame"
+                class="checkbox"
+              />
+              <span class="checkbox--new"></span>
+            </label>
+          </div>
+        </form>
+        <div class="item-list__grid" id="itemList">
+          <app-item id="1"></app-item>
+          <app-item id="1"></app-item>
+          <app-item id="1"></app-item>
+          <app-item id="1"></app-item>
+        </div>
       </section>
+
       <app-footer></app-footer>
     </main>
   </body>
