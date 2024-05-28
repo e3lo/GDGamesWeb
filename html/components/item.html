@@ -1,0 +1,17 @@
+<template id="app-item">
+  <li class="item">
+    <picture class="item__picture">
+      <img src="/assets/products/xbox.jpg" />
+    </picture>
+    <p -text="type" class="GD__text--sm"></p>
+    <h3 -text="title" class="GD__text--lg"></h3>
+    <div class="item__info">
+      <p -text="description" class="GD__text--sm"></p>
+
+      <p class="item__info__price">$<span -text="price"></span></p>
+    </div>
+    <button class="item-button" -text="cta" onclick="onItemClick(event)">
+      Shop Category
+    </button>
+  </li>
+</template>

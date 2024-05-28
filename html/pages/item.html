@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GD Games</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Page Stylesheet -->
-    <link rel="stylesheet" href="css/pages/index.css" />
+    <link rel="stylesheet" href="../../css/pages/section.css" />
 
     <!-- Component Stylesheets -->
-    <link rel="stylesheet" href="css/components/barcode.css" />
-    <link rel="stylesheet" href="css/components/navigation.css" />
-    <link rel="stylesheet" href="css/components/item.css" />
-    <link rel="stylesheet" href="css/components/categorySection.css" />
-    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="../../css/components/barcode.css" />
+    <link rel="stylesheet" href="../../css/components/navigation.css" />
+    <link rel="stylesheet" href="../../css/components/item.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
 
     <!-- Google Icons -->
     <link
@@ -27,110 +26,6 @@
   <body>
     <main>
       <app-navigation></app-navigation>
-      <!-- Hero -->
-      <section class="landing-hero">
-        <ol class="landing-hero__items" id="hero-list">
-          <!-- Featured Items -->
-          <li>
-            <div class="landing-hero__items__content">
-              <div>
-                <p>PS5 Collectors Edition</p>
-                <h2 class="GD__text--3xl">FINAL FANTASY VII</h2>
-              </div>
-            </div>
-            <app-barcode body="GAME OF THE YEAR"></app-barcode>
-          </li>
-
-          <!-- Featured Items -->
-          <li>
-            <div class="landing-hero__items__content">
-              <div>
-                <p>2010s Classic</p>
-                <h2 class="GD__text--3xl">NieR: Automata</h2>
-              </div>
-            </div>
-            <app-barcode body="AWARD WINNING"></app-barcode>
-          </li>
-
-          <!-- Featured Items -->
-          <li>
-            <div class="landing-hero__items__content">
-              <div>
-                <p>Most anticipated</p>
-                <h2 class="GD__text--3xl">Silksong</h2>
-              </div>
-            </div>
-            <app-barcode body="AWARD WINNING"></app-barcode>
-          </li>
-        </ol>
-
-        <div class="landing-hero__carousel">
-          <button onclick="onLandingHeroClick()">View Item</button>
-          <ol id="hero-selection-list">
-            <li onclick="changeActive(0)"></li>
-            <li onclick="changeActive(1)"></li>
-            <li onclick="changeActive(2)"></li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- Store Category -->
-      <section class="store-category">
-        <div class="container">
-          <div class="store-category__title">
-            <h2 class="GD__text--xl">STORE CATEGORY</h2>
-            <p>Explore our wide collection of products</p>
-          </div>
-          <ul class="item-collection">
-            <!-- Store Items -->
-            <app-item
-              title="PLAYSTATION"
-              type=""
-              description="Games, Controllers, Consoles and more"
-              src="/assets/products/ps5.jpg"
-            ></app-item>
-            <app-item
-              title="Xbox"
-              type=""
-              description="Games, Controllers, Consoles and more"
-              src="/assets/products/xbox.jpg"
-            ></app-item>
-            <app-item
-              title="PC"
-              type=""
-              description="Peripherals, Games and PC Parts"
-              src="/assets/products/pc.jpg"
-            ></app-item>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Category Sections -->
-      <app-category-section
-        title="PLAYSTATION"
-        description="Home to the best exclusive and award winning games"
-        stat="387+"
-        statDescription="Games Available"
-        itemDescription="Limited Stock!"
-        itemTitle="PS5 Digital Edition"
-        items="0,1,0"
-        src1="/assets/banners/GoW.webp"
-        src2="/assets/decor/ps5Controller.jpg"
-        src3="/assets/products/spiderman.jpg"
-      ></app-category-section>
-
-      <app-category-section
-        title="XBOX"
-        description="Home to the best exclusive and award winning games"
-        stat="387+"
-        statDescription="Games Available"
-        itemDescription="Limited Stock!"
-        itemTitle="PS5 Digital Edition"
-        items="0,0,0"
-        src1="/assets/banners/GoW.webp"
-        src2="/assets/decor/ps5Controller.jpg"
-        src3="/assets/products/spiderman.jpg"
-      ></app-category-section>
 
       <app-footer></app-footer>
     </main>
@@ -147,23 +42,13 @@
     <nav class="nav">
       <div class="nav__bar">
         <div class="GD__text--logo">GD GAMES</div>
-        <ul class="nav__links">
-          <li>Home</li>
-          <li>Xbox</li>
-          <li>Playstation</li>
-          <li>My cart</li>
-        </ul>
+        <ul class="nav__links"></ul>
         <span class="GD__icon nav__menu" onclick="onMobileNavClick(event)"
           >menu</span
         >
       </div>
       <div id="nav__popup">
-        <ul class="nav__links--mobile GD__text--lg">
-          <li>Home</li>
-          <li>Xbox</li>
-          <li>Playstation</li>
-          <li>My cart</li>
-        </ul>
+        <ul class="nav__links--mobile GD__text--lg"></ul>
       </div>
     </nav>
   </template>
@@ -171,7 +56,7 @@
   <template id="app-item">
     <li class="item">
       <picture class="item__picture">
-        <img src="/assets/products/xbox.jpg" />
+        <img src="../..//assets/products/xbox.jpg" />
       </picture>
       <p -text="type" class="GD__text--sm"></p>
       <h3 -text="title" class="GD__text--lg"></h3>
@@ -184,45 +69,6 @@
         Shop Category
       </button>
     </li>
-  </template>
-
-  <template id="app-category-section">
-    <section class="category-section">
-      <div class="category-section__bg">
-        <div class="container category-section__content">
-          <app-barcode body="GOD OF WAR"></app-barcode>
-          <div class="category-section__content--list">
-            <div class="category-section__content--title">
-              <div class="category-section__title">
-                <h2 class="GD__text--2xl" -text="title">PLAYSTATION</h2>
-                <p -text="description">
-                  Home to many exclusive award winning games
-                </p>
-                <button class="desktop">Shop Category</button>
-              </div>
-              <button class="mobile">Shop Category</button>
-            </div>
-            <div class="category-section__bento">
-              <div class="category-section__bento__stat bento">
-                <strong class="GD__text--2xl" -text="stat">387+</strong>
-                <p -text="statDescription">Games available</p>
-              </div>
-              <div class="category-section__bento__img bento"></div>
-              <div class="category-section__bento__item bento">
-                <p class="GD__text--sm" -text="itemDescription">
-                  Limited Stock
-                </p>
-                <strong class="GD__text--lg" -text="itemTitle"
-                  >PS5 Digital Edition</strong
-                >
-                <button class="bento__button">Shop Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="category-collection container"></div>
-    </section>
   </template>
 
   <template id="app-footer">
@@ -238,10 +84,10 @@
         <div class="footer__content__branding">
           <div class="GD__text--2xl">GD GAMES</div>
           <div class="footer__content__branding__socials">
-            <img src="/assets/decor/socials/facebook.svg" />
+            <img src="../../assets/decor/socials/facebook.svg" />
 
-            <img src="/assets/decor/socials/instagram.svg" />
-            <img src="/assets/decor/socials/youtube.svg" />
+            <img src="../..//assets/decor/socials/instagram.svg" />
+            <img src="../..//assets/decor/socials/youtube.svg" />
           </div>
         </div>
         <div class="footer__content__links">
@@ -260,5 +106,5 @@
       </div>
     </footer>
   </template>
-  <script type="module" src="js/index.js"></script>
+  <script type="module" src="../../js/pages/section.js"></script>
 </html>

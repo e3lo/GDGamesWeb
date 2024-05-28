@@ -5,6 +5,7 @@ export class ComponentHandler {
 
   register(component) {
     this.componentList.push(component);
+    return this;
   }
 
   renderComponents(scope) {

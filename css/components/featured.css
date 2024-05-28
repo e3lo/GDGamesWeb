@@ -1,0 +1,26 @@
+.featured {
+  margin-top: -16rem;
+  width: 100%;
+  background: url(/assets/decor/liss_2.svg);
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+}
+
+.featured__title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 2rem;
+  row-gap: 0.5rem;
+}
+
+.featured__title__text {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.featured__title > p {
+  max-width: 300px;
+  text-align: center;
+}

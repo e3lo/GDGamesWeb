@@ -1,0 +1,36 @@
+<template id="app-category-section">
+  <section class="category-section">
+    <div class="category-section__bg">
+      <div class="container category-section__content">
+        <app-barcode body="GOD OF WAR"></app-barcode>
+        <div class="category-section__content--list">
+          <div class="category-section__content--title">
+            <div class="category-section__title">
+              <h2 class="GD__text--2xl" -text="title">PLAYSTATION</h2>
+              <p -text="description">
+                Home to many exclusive award winning games
+              </p>
+              <button class="desktop">Shop Category</button>
+            </div>
+            <button class="mobile">Shop Category</button>
+          </div>
+          <div class="category-section__bento">
+            <div class="category-section__bento__stat bento">
+              <strong class="GD__text--2xl" -text="stat">387+</strong>
+              <p -text="statDescription">Games available</p>
+            </div>
+            <div class="category-section__bento__img bento"></div>
+            <div class="category-section__bento__item bento">
+              <p class="GD__text--sm" -text="itemDescription">Limited Stock</p>
+              <strong class="GD__text--lg" -text="itemTitle"
+                >PS5 Digital Edition</strong
+              >
+              <button class="bento__button">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="category-collection container"></div>
+  </section>
+</template>

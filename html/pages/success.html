@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GD Games</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+
+    <!-- Page Stylesheet -->
+    <link rel="stylesheet" href="../../css/pages/section.css" />
+
+    <!-- Component Stylesheets -->
+    <link rel="stylesheet" href="../../css/components/barcode.css" />
+    <link rel="stylesheet" href="../../css/components/navigation.css" />
+    <link rel="stylesheet" href="../../css/components/item.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
+
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <app-navigation></app-navigation>
+
+      <app-footer></app-footer>
+    </main>
+  </body>
+  <!-- TEMPLATES  -->
+  <template id="app-barcode">
+    <div class="barcode">
+      <p -text="body" class="GD__barcode"></p>
+      <p -text="body" class="GD__barcode--text"></p>
+    </div>
+  </template>
+
+  <template id="app-navigation">
+    <nav class="nav">
+      <div class="nav__bar">
+        <div class="GD__text--logo">GD GAMES</div>
+        <ul class="nav__links"></ul>
+        <span class="GD__icon nav__menu" onclick="onMobileNavClick(event)"
+          >menu</span
+        >
+      </div>
+      <div id="nav__popup">
+        <ul class="nav__links--mobile GD__text--lg"></ul>
+      </div>
+    </nav>
+  </template>
+
+  <template id="app-item">
+    <li class="item">
+      <picture class="item__picture">
+        <img src="../..//assets/products/xbox.jpg" />
+      </picture>
+      <p -text="type" class="GD__text--sm"></p>
+      <h3 -text="title" class="GD__text--lg"></h3>
+      <div class="item__info">
+        <p -text="description" class="GD__text--sm"></p>
+
+        <p class="item__info__price">$<span -text="price"></span></p>
+      </div>
+      <button class="item-button" -text="cta" onclick="onItemClick(event)">
+        Shop Category
+      </button>
+    </li>
+  </template>
+
+  <template id="app-footer">
+    <footer class="footer">
+      <form class="footer__mailing">
+        <label for="email" class="GD__text--semibold">Join mailing list</label>
+        <div class="footer__mailing__field">
+          <input type="text" id="email" name="email" class="inputBox" />
+          <input type="submit" value="Submit" class="button" />
+        </div>
+      </form>
+      <div class="footer__content">
+        <div class="footer__content__branding">
+          <div class="GD__text--2xl">GD GAMES</div>
+          <div class="footer__content__branding__socials">
+            <img src="../../assets/decor/socials/facebook.svg" />
+
+            <img src="../..//assets/decor/socials/instagram.svg" />
+            <img src="../..//assets/decor/socials/youtube.svg" />
+          </div>
+        </div>
+        <div class="footer__content__links">
+          <ul class="footer__content__links__column">
+            <b class="GD__text--semibold">Legal Stuff</b>
+            <li>Terms and conditions</li>
+            <li>Privacy Policy</li>
+            <li>Return Policy</li>
+          </ul>
+          <ul class="footer__content__links__column">
+            <b class="GD__text--semibold">Learn More</b>
+            <li>About Us</li>
+            <li>Jobs</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </template>
+  <script type="module" src="../../js/pages/section.js"></script>
+</html>
