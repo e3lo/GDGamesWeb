@@ -1,4 +1,5 @@
 import { Component } from '../framework/component.js';
+import { getPageInfo } from '../framework/pageInfoHandler.js';
 
 export default class TypeOverview extends Component {
   constructor(document) {
@@ -24,6 +25,14 @@ export default class TypeOverview extends Component {
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
 
+    const newProps = getPageInfo(this.props.id).section[
+      parseInt(this.props.order)
+    ];
+
+    this.copyProps(newProps);
+
+    super.setTextBinding(templateClone);
+
     this.setImage(
       templateClone.querySelector('.type-section__bg'),
       `linear-gradient(rgba(48, 48, 48, 0.4), rgba(23, 23, 23, 1)),
@@ -37,16 +46,21 @@ export default class TypeOverview extends Component {
 
     // Setting the item list
     const itemSection = templateClone.querySelector('.type-collection');
-    const items = this.props.items.split(',');
-    items.forEach((value) => {
+    this.props.items.forEach((value) => {
       const element = document.createElement('app-item');
       element.setAttribute('id', value);
       itemSection.appendChild(element);
     });
 
-    // items.appendChild(this.createElement('app-item'));
+    // Setting the barcode
+    const barcode = templateClone.querySelector('app-barcode');
+    barcode.setAttribute('body', this.props.barcodeText);
 
     return templateClone;
+  }
+
+  copyProps(newProps) {
+    this.props = { ...this.props, ...newProps };
   }
 
   setImage(node, backgroundStyle) {
