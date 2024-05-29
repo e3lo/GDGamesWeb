@@ -1,0 +1,51 @@
+.item-option {
+  background-color: var(--cream10);
+  padding: 1.5rem;
+  border: 1px solid var(--cream);
+  border-radius: 0.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-option__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--cream30);
+  margin-bottom: 0.7rem;
+}
+
+.item-decor {
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+
+.item-price {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.item-stock {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2rem;
+  padding-top: 1rem;
+}
+
+.stock-indicator--red {
+  color: var(--red);
+  font-size: 3rem;
+}
+
+.stock-indicator--yellow {
+  color: var(--yellow);
+  font-size: 3rem;
+}
+
+.stock-indicator--green {
+  color: var(--green);
+  font-size: 3rem;
+}
