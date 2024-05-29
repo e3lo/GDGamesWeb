@@ -1,4 +1,19 @@
 const pageInfo = {
+  cart: {
+    hero: {
+      title: 'My Cart',
+      body: '',
+      background: '/assets/banners/GoW.webp',
+      routingPath: [
+        { name: 'back', url: 'javascript:history.back()' },
+        { name: '', url: '' },
+      ],
+      barcode: {
+        body: '',
+      },
+    },
+  },
+
   playstation: {
     hero: {
       title: 'Super Idol',

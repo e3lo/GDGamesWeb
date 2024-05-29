@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Page Stylesheet -->
-    <link rel="stylesheet" href="../../css/pages/section.css" />
+    <link rel="stylesheet" href="../../css/pages/cart.css" />
 
     <!-- Component Stylesheets -->
     <link rel="stylesheet" href="../../css/components/barcode.css" />
     <link rel="stylesheet" href="../../css/components/navigation.css" />
     <link rel="stylesheet" href="../../css/components/item.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
+    <link rel="stylesheet" href="../../css/components/hero.css" />
+    <link rel="stylesheet" href="../../css/components/checkoutItem.css" />
 
     <!-- Google Icons -->
     <link
@@ -26,7 +28,13 @@
   <body>
     <main>
       <app-navigation></app-navigation>
-
+      <app-hero id="cart"></app-hero>
+      <section class="cart">
+        <button onclick="onCheckout()">Checkout</button>
+        <div class="checkout-list">
+          <app-checkout-item quantity="1"></app-checkout-item>
+        </div>
+      </section>
       <app-footer></app-footer>
     </main>
   </body>
@@ -106,5 +114,44 @@
       </div>
     </footer>
   </template>
-  <script type="module" src="../../js/pages/section.js"></script>
+  <template id="app-hero">
+    <section class="hero">
+      <div class="mobile">
+        <div class="hero__breadcrumbs" id="breadcrumbs1"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__content__container">
+          <div class="desktop">
+            <div class="hero__breadcrumbs" id="breadcrumbs2"></div>
+          </div>
+          <h1 class="hero__title" -text="title">PLAYSTATION</h1>
+          <p -text="body">Home to many exclusive award winning games</p>
+        </div>
+      </div>
+      <app-barcode body="GOD OF WAR"></app-barcode>
+    </section>
+  </template>
+  <template id="app-checkout-item">
+    <div class="checkout-item">
+      <div class="checkout-item__title">hi</div>
+      <div class="checkout-item__qty">
+        <div class="item-quantity__overview" onclick="onQuantityToggle()">
+          <span>QTY: </span>
+          <span id="item-quantity__value">1</span>
+          <span class="material-symbols-outlined item-quantity__icon">
+            keyboard_arrow_down
+          </span>
+        </div>
+        <div class="item-quantity__details">
+          <button class="button--outline" onclick="onMinusItem(event)">
+            -
+          </button>
+          <button onclick="onAddItem(event)">+</button>
+        </div>
+      </div>
+      <div class="checkout-item__data">bello</div>
+    </div>
+  </template>
+  <script type="module" src="../../js/pages/cart.js"></script>
 </html>
