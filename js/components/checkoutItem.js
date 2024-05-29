@@ -87,8 +87,13 @@ export default class CheckoutItem extends Component {
   }
 
   // Handling Qty
-  onQuantityToggle() {
-    const quantityDetails = document.querySelector('.item-quantity__details');
+  onQuantityToggle(event) {
+    const quantityDetails =
+      event.srcElement.parentNode.parentNode.querySelector(
+        '.item-quantity__details'
+      );
+
+    console.log(quantityDetails);
 
     if (quantityDetails.classList.contains('show')) {
       quantityDetails.classList.remove('show');
