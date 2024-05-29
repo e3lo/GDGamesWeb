@@ -3,6 +3,7 @@ import Footer from '../components/footer.js';
 import Hero from '../components/hero.js';
 import Item from '../components/item.js';
 import Navigation from '../components/navigation.js';
+import Slideshow from '../components/slideshow.js';
 import { ComponentHandler } from '../framework/componentHandler.js';
 import { getItemById } from '../framework/itemHandler.js';
 
@@ -14,13 +15,15 @@ let navigation = new Navigation(document);
 let item = new Item(document);
 let footer = new Footer(document);
 let hero = new Hero(document);
+let slideshow = new Slideshow(document);
 
 componentHandler
   .register(barcode)
   .register(navigation)
   .register(item)
   .register(footer)
-  .register(hero);
+  .register(hero)
+  .register(slideshow);
 
 // Rendering information
 const currentUrl = new URL(window.location.href);

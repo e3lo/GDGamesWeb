@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../../css/components/item.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
     <link rel="stylesheet" href="../../css/components/hero.css" />
+    <link rel="stylesheet" href="../../css/components/slideshow.css" />
 
     <!-- Google Icons -->
     <link
@@ -28,6 +29,10 @@
     <main>
       <app-navigation></app-navigation>
       <app-hero itemid="0"></app-hero>
+      <section class="item-info">
+        <button>ADD TO CART</button>
+        <app-slideshow itemid="0"></app-slideshow>
+      </section>
       <app-footer></app-footer>
     </main>
   </body>
@@ -125,6 +130,15 @@
       </div>
       <app-barcode body="GOD OF WAR"></app-barcode>
     </section>
+  </template>
+
+  <template id="app-slideshow">
+    <div class="slideshow">
+      <picture class="slideshow--main">
+        <img id="main-image" src="/assets/products/GoW.webp" />
+      </picture>
+      <div class="slideshow__options"></div>
+    </div>
   </template>
 
   <script type="module" src="../../js/pages/item.js"></script>

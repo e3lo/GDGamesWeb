@@ -9,7 +9,11 @@ const itemList = [
     bgImg: '/assets/banners/GoW.webp',
     tags: 'Co-op, FPS',
     cta: 'View Item',
-    productImg: ['/assets/products/GoW.webp'],
+    productImg: [
+      '/assets/products/GoW.webp',
+      '/assets/products/pc.jpg',
+      '/assets/products/GoW.webp',
+    ],
     productOptions: [
       {
         title: 'PS5 Digital',
