@@ -30,8 +30,13 @@
       <app-navigation></app-navigation>
       <app-hero id="cart"></app-hero>
       <section class="cart">
+        <p class="cart__subtotal">Subtotal: $444</p>
         <button onclick="onCheckout()">Checkout</button>
         <div class="checkout-list"></div>
+        <div class="checkout__final">
+          <button onclick="onCheckout()">Checkout</button>
+          <p class="cart__subtotal">Subtotal: $444</p>
+        </div>
       </section>
       <app-footer></app-footer>
     </main>

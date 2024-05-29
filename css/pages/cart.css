@@ -11,3 +11,26 @@
   gap: 3rem;
   padding-top: 3rem;
 }
+
+.cart__subtotal {
+  padding-bottom: 0.5rem;
+}
+
+.checkout__final {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checkout__final > button {
+  width: 100%;
+}
+
+.checkout__final > p {
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-align: right;
+}

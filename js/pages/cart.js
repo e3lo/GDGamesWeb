@@ -41,11 +41,31 @@ cart.forEach((element, index) => {
   item.setAttribute('product-title', productType.title);
   item.setAttribute('img', productData.productImg[0]);
 
+  item.addEventListener('onSubtotalChange', calculateSubtotal);
+
   checkoutList.appendChild(item);
 });
 
 componentHandler.renderComponents(document);
 
-function onCheckout() {}
+calculateSubtotal();
+
+function onCheckout() {
+  console.log('Checkout');
+}
+
+function calculateSubtotal() {
+  const items = document.querySelector('.checkout-list');
+  const subtotalList = document.querySelectorAll('.cart__subtotal');
+  let subtotalValue = 0;
+
+  Array.from(items.children).forEach((value) => {
+    subtotalValue += parseInt(value.getAttribute('subtotal'));
+  });
+
+  Array.from(subtotalList).forEach((value) => {
+    value.innerText = `Subtotal: $${subtotalValue}`;
+  });
+}
 
 globalThis.onCheckout = onCheckout;

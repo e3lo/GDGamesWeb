@@ -76,6 +76,10 @@ export default class CheckoutItem extends Component {
     localStorage.setItem('cart', JSON.stringify(cart));
 
     item.setAttribute('qty', value);
+
+    // Setting event
+    const event = new Event('onSubtotalChange');
+    item.dispatchEvent(event);
   }
 
   getQuantity(item) {
