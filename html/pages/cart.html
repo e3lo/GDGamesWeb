@@ -29,7 +29,7 @@
     <main>
       <app-navigation></app-navigation>
       <app-hero id="cart"></app-hero>
-      <section class="cart">
+      <section class="cart container">
         <p class="cart__subtotal">Subtotal: $444</p>
         <button onclick="onCheckout()">Checkout</button>
         <div class="checkout-list"></div>
@@ -139,13 +139,15 @@
     <div class="checkout-item">
       <div class="checkout-item__title">
         <img class="checkout-item__img" src="/assets/products/GoW.webp" />
-        <b -text="title" class="GD__text--lg">GOD OF WAR</b>
-        <p -text="product-title">PS5 Digital</p>
+        <div class="checkout-item__title__text">
+          <b -text="title" class="GD__text--lg">GOD OF WAR</b>
+          <p -text="product-title">PS5 Digital</p>
+        </div>
       </div>
       <div class="checkout-item__qty">
         <div class="item-quantity__overview" onclick="onQuantityToggle(event)">
           <span>QTY: </span>
-          <span id="item-quantity__value">1</span>
+          <span id="item-quantity__value" -text="qty">1</span>
           <span class="material-symbols-outlined item-quantity__icon">
             keyboard_arrow_down
           </span>

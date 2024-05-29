@@ -9,6 +9,7 @@
   --cream10: rgba(255, 251, 218, 0.1);
   --yellow: #decf4a;
   --red: #ef4444;
+  --lightRed: #f87171;
 }
 
 * {
@@ -57,7 +58,8 @@ button,
   color: var(--cream);
 }
 
-button:hover {
+button:hover,
+.button:hover {
   transform: scale(1.05);
   cursor: pointer;
 }

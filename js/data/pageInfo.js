@@ -14,6 +14,21 @@ const pageInfo = {
     },
   },
 
+  checkout: {
+    hero: {
+      title: 'Checkout',
+      body: '',
+      background: '/assets/banners/GoW.webp',
+      routingPath: [
+        { name: 'back', url: 'javascript:history.back()' },
+        { name: '', url: '' },
+      ],
+      barcode: {
+        body: '',
+      },
+    },
+  },
+
   playstation: {
     hero: {
       title: 'Super Idol',

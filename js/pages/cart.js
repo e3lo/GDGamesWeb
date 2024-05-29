@@ -17,6 +17,8 @@ let footer = new Footer(document);
 let hero = new Hero(document);
 let checkoutItem = new CheckoutItem(document);
 
+let subtotal = 0;
+
 componentHandler
   .register(barcode)
   .register(navigation)
@@ -51,7 +53,8 @@ componentHandler.renderComponents(document);
 calculateSubtotal();
 
 function onCheckout() {
-  console.log('Checkout');
+  localStorage.setItem('subtotal', subtotal);
+  window.location.href = './checkout.html';
 }
 
 function calculateSubtotal() {
@@ -66,6 +69,8 @@ function calculateSubtotal() {
   Array.from(subtotalList).forEach((value) => {
     value.innerText = `Subtotal: $${subtotalValue}`;
   });
+
+  subtotal = subtotalValue;
 }
 
 globalThis.onCheckout = onCheckout;

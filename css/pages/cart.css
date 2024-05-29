@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+#item-quantity__value {
+  padding-left: 0.5rem;
+}
+
 .checkout__final > button {
   width: 100%;
 }

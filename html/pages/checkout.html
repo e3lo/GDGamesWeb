@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Page Stylesheet -->
-    <link rel="stylesheet" href="../../css/pages/section.css" />
+    <link rel="stylesheet" href="../../css/pages/checkout.css" />
 
     <!-- Component Stylesheets -->
     <link rel="stylesheet" href="../../css/components/barcode.css" />
     <link rel="stylesheet" href="../../css/components/navigation.css" />
     <link rel="stylesheet" href="../../css/components/item.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
+    <link rel="stylesheet" href="../../css/components/hero.css" />
 
     <!-- Google Icons -->
     <link
@@ -26,7 +27,164 @@
   <body>
     <main>
       <app-navigation></app-navigation>
+      <app-hero id="checkout"></app-hero>
+      <form class="checkout__field">
+        <div class="checkout__field__section">
+          <h2 class="GD__text--2xl">Personal Details</h2>
+          <div>
+            <div class="field__info">
+              <label for="name"> Full name </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              id="name"
+            />
+          </div>
 
+          <div>
+            <div class="field__info">
+              <label for="contactEmail"> Email </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="email"
+              name="contactEmail"
+              placeholder="John@Doe.com"
+              id="contactEmail"
+            />
+          </div>
+
+          <div>
+            <div class="field__info">
+              <label for="mobile"> Mobile </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="tel"
+              name="mobile"
+              placeholder="04xxxxxxxx"
+              id="mobile"
+            />
+          </div>
+        </div>
+        <div class="checkout__field__section">
+          <h2 class="GD__text--2xl">Shipping Details</h2>
+          <div>
+            <div class="field__info">
+              <label for="address"> Address </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="text"
+              name="address"
+              placeholder="123 Games Lane, Melbourne"
+              id="address"
+            />
+          </div>
+        </div>
+        <div class="checkout__field__section">
+          <h2 class="GD__text--2xl">Payment Information</h2>
+          <div>
+            <div class="field__info">
+              <label for="billingName"> Billing Name </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="text"
+              name="billingName"
+              placeholder="John Doe"
+              id="billingName"
+            />
+          </div>
+
+          <div>
+            <div class="field__info">
+              <label for="card"> Card Number </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="number"
+              name="card"
+              placeholder="1234 1234 1234 1234"
+              id="card"
+            />
+          </div>
+
+          <div class="payment__info">
+            <div class="payment__expiry">
+              <div class="field__info">
+                <label for="expiry"> Expiry Date </label>
+                <small>*required</small>
+              </div>
+              <input
+                class="inputBox checkout_text"
+                type="month"
+                name="expiry"
+                placeholder="04xxxxxxxx"
+                id="expiry"
+              />
+            </div>
+
+            <div class="payment__cvv">
+              <div class="field__info">
+                <label for="cvv"> Security Code </label>
+                <small>*required</small>
+              </div>
+              <input
+                class="inputBox checkout_text"
+                type="password"
+                name="cvv"
+                placeholder="CVV"
+                id="cvv"
+              />
+            </div>
+          </div>
+          <label for="isBillingAddress" class="input-container">
+            Billing address is same as above
+            <input
+              type="checkbox"
+              checked="checked"
+              id="isBillingAddress"
+              name="isBillingAddress"
+              class="checkbox"
+              onclick="toggleBillingAddress()"
+            />
+            <span class="checkbox--new"></span>
+          </label>
+          <div id="billingAddressField" class="hidden">
+            <div class="field__info">
+              <label for="billingAddress"> Billing Address </label>
+              <small>*required</small>
+            </div>
+            <input
+              class="inputBox checkout_text"
+              type="text"
+              name="billingAddress"
+              placeholder="123 Games Lane, Melbourne"
+              id="billingAddress"
+            />
+          </div>
+        </div>
+        <div class="checkout__submit">
+          <p id="total">TOTAL: $199</p>
+          <input
+            type="submit"
+            value="Pay Now"
+            class="button"
+            onclick="onSubmit(event)"
+          />
+          <p id="warning" class="warning-message"></p>
+        </div>
+      </form>
       <app-footer></app-footer>
     </main>
   </body>
@@ -106,5 +264,24 @@
       </div>
     </footer>
   </template>
-  <script type="module" src="../../js/pages/section.js"></script>
+  <template id="app-hero">
+    <section class="hero">
+      <div class="mobile">
+        <div class="hero__breadcrumbs" id="breadcrumbs1"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__content__container">
+          <div class="desktop">
+            <div class="hero__breadcrumbs" id="breadcrumbs2"></div>
+          </div>
+          <h1 class="hero__title" -text="title">PLAYSTATION</h1>
+          <p -text="body">Home to many exclusive award winning games</p>
+        </div>
+      </div>
+      <app-barcode body="GOD OF WAR"></app-barcode>
+    </section>
+  </template>
+
+  <script type="module" src="../../js/pages/checkout.js"></script>
 </html>
