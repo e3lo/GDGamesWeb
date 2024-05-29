@@ -76,7 +76,7 @@ function onSubmit(event) {
   if (emptyFields) {
     warnUserEmptyField();
   } else {
-    console.log('subitted');
+    window.location.href = './success.html';
   }
 }
 

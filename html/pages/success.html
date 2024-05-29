@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Page Stylesheet -->
-    <link rel="stylesheet" href="../../css/pages/section.css" />
+    <link rel="stylesheet" href="../../css/pages/success.css" />
 
     <!-- Component Stylesheets -->
     <link rel="stylesheet" href="../../css/components/barcode.css" />
     <link rel="stylesheet" href="../../css/components/navigation.css" />
     <link rel="stylesheet" href="../../css/components/item.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
+    <link rel="stylesheet" href="../../css/components/hero.css" />
 
     <!-- Google Icons -->
     <link
@@ -26,7 +27,8 @@
   <body>
     <main>
       <app-navigation></app-navigation>
-
+      <app-hero id="success"></app-hero>
+      <a class="button success__button" href="../../index.html">Back to home</a>
       <app-footer></app-footer>
     </main>
   </body>
@@ -106,5 +108,25 @@
       </div>
     </footer>
   </template>
-  <script type="module" src="../../js/pages/section.js"></script>
+
+  <template id="app-hero">
+    <section class="hero">
+      <div class="mobile">
+        <div class="hero__breadcrumbs" id="breadcrumbs1"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__content__container">
+          <div class="desktop">
+            <div class="hero__breadcrumbs" id="breadcrumbs2"></div>
+          </div>
+          <h1 class="hero__title" -text="title">PLAYSTATION</h1>
+          <p -text="body">Home to many exclusive award winning games</p>
+        </div>
+      </div>
+      <app-barcode body="GOD OF WAR"></app-barcode>
+    </section>
+  </template>
+
+  <script type="module" src="../../js/pages/success.js"></script>
 </html>

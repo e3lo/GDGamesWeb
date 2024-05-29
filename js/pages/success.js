@@ -2,6 +2,8 @@ import Barcode from '../components/barcode.js';
 import Footer from '../components/footer.js';
 import Item from '../components/item.js';
 import Navigation from '../components/navigation.js';
+import Hero from '../components/hero.js';
+
 import { ComponentHandler } from '../framework/componentHandler.js';
 
 // Component Handling
@@ -11,10 +13,13 @@ let barcode = new Barcode(document);
 let navigation = new Navigation(document);
 let item = new Item(document);
 let footer = new Footer(document);
+let hero = new Hero(document);
 
-componentHandler.register(barcode);
-componentHandler.register(navigation);
-componentHandler.register(item);
-componentHandler.register(footer);
+componentHandler
+  .register(barcode)
+  .register(navigation)
+  .register(item)
+  .register(footer)
+  .register(hero);
 
 componentHandler.renderComponents(document);

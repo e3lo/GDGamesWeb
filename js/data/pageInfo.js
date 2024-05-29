@@ -14,6 +14,21 @@ const pageInfo = {
     },
   },
 
+  success: {
+    hero: {
+      title: 'PAYMENT SUCCESS',
+      body: 'You should recieve a confirmation email shortly',
+      background: '/assets/banners/GoW.webp',
+      routingPath: [
+        { name: 'home', url: '../../index.html' },
+        { name: '', url: '' },
+      ],
+      barcode: {
+        body: '',
+      },
+    },
+  },
+
   checkout: {
     hero: {
       title: 'Checkout',
