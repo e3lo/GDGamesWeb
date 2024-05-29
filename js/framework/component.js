@@ -5,6 +5,11 @@ export class Component {
     this.setTemplate(document.getElementById(this.name));
   }
 
+  // Entry Point
+  render(parentNode) {
+    parentNode.appendChild(this.createElement(parentNode));
+  }
+
   setTemplate(template) {
     this.template = template;
   }
@@ -26,6 +31,19 @@ export class Component {
     }
   }
 
+  setAttributes(parentNode) {
+    if (this.props == null) {
+      console.log('Empty props');
+      return;
+    }
+
+    for (const key in this.props) {
+      if (this.props.hasOwnProperty(key)) {
+        parentNode.setAttribute(key, this.props[key]);
+      }
+    }
+  }
+
   createElement(parentNode) {
     let templateClone = this.template.content.cloneNode(true);
     // Resetting props
@@ -33,6 +51,15 @@ export class Component {
 
     // Setting props
     this.setProps(parentNode);
+
+    // Setting text binding
+    templateClone = this.setTextBinding(templateClone);
+
+    return templateClone;
+  }
+
+  createElementWithoutReset(parentNode) {
+    let templateClone = this.template.content.cloneNode(true);
 
     // Setting text binding
     templateClone = this.setTextBinding(templateClone);
@@ -49,9 +76,5 @@ export class Component {
     }
 
     return templateClone;
-  }
-
-  render(parentNode) {
-    parentNode.appendChild(this.createElement(parentNode));
   }
 }

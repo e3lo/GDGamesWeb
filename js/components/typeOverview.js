@@ -24,28 +24,28 @@ export default class TypeOverview extends Component {
   }
 
   createElement(parentNode) {
-    const templateClone = super.createElement(parentNode);
-
+    // Retrieving the real data for the component
+    super.setProps(parentNode);
     const newProps = getPageInfo(this.props.id).section[
       parseInt(this.props.order)
     ];
-
     this.copyProps(newProps);
+    super.setAttributes(parentNode);
 
-    super.setTextBinding(templateClone);
+    // Loading the actual component
+    const templateClone = super.createElementWithoutReset(parentNode);
 
+    // Setting the images
     this.setImage(
       templateClone.querySelector('.type-section__bg'),
       `linear-gradient(rgba(48, 48, 48, 0.4), rgba(23, 23, 23, 1)),
     url(${this.props.src1})`
     );
-
     this.setImage(
       templateClone.querySelector('.type-section__bento__stat'),
       `url(${this.props.src2})`
     );
 
-    // Setting the item list
     const itemSection = templateClone.querySelector('.type-collection');
     this.props.items.forEach((value) => {
       const element = document.createElement('app-item');
@@ -80,8 +80,7 @@ export default class TypeOverview extends Component {
         .parentNode;
     console.log(item);
     const id = item.getAttribute('id');
-    const type = this.props.type;
 
-    window.location.href = `./search.html?id=${id}&type=${type}`;
+    window.location.href = `./search.html?id=${id}`;
   }
 }

@@ -16,7 +16,7 @@ const pageInfo = {
 
     section: [
       {
-        id: 'playstation',
+        id: 'search_playstation_games',
         barcodeText: 'PS5 Hardware',
         type: 'controllers',
         title: 'Controllers',
@@ -28,9 +28,9 @@ const pageInfo = {
           'Try out the new 2024 wireless controllers! It’s a lot better than you think </br> </br> - GD Games',
       },
       {
-        id: 'playstation',
+        id: 'search_playstation_games',
         barcodeText: 'PS5 Hardware',
-        type: 'controllers',
+        type: 'bugs',
         title: 'Controllers',
         description: 'Home to the best exclusive and award winning games',
         items: [0, 1, 0],
@@ -42,7 +42,7 @@ const pageInfo = {
     ],
   },
 
-  search_playstation: {
+  search_playstation_games: {
     hero: {
       routingPath: [
         { name: 'home', url: '../../index.html' },

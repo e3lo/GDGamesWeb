@@ -25,13 +25,15 @@ componentHandler
 // Rendering information
 const currentUrl = new URL(window.location.href);
 const urlParams = new URLSearchParams(currentUrl.search);
-const id = 'search_' + urlParams.get('id');
-const type = urlParams.get('type');
+const id = urlParams.get('id');
 
 // Loading Website Content
 const pageInfo = getPageInfo(id);
-console.log(pageInfo.items);
 const itemsList = pageInfo.items;
+
+// Setting up the dynamic Hero data
+const heroComponent = document.querySelector('app-hero');
+heroComponent.setAttribute('id', id);
 
 // Handling Category Logic
 let activeCategory = 0;
