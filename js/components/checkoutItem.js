@@ -44,6 +44,10 @@ export default class CheckoutItem extends Component {
 
     parentNode.setAttribute('subtotal', subtotalValue);
 
+    // Setting img
+    let img = templateClone.querySelector('.checkout-item__img');
+    img.setAttribute('src', parentNode.getAttribute('img'));
+
     return templateClone;
   }
 

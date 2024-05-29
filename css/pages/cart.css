@@ -4,3 +4,10 @@
   flex-direction: column;
   padding: 0 2rem;
 }
+
+.checkout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 3rem;
+}
