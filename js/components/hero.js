@@ -1,4 +1,5 @@
 import { Component } from '../framework/component.js';
+import { getItemById } from '../framework/itemHandler.js';
 import { getPageInfo } from '../framework/pageInfoHandler.js';
 
 export default class Hero extends Component {
@@ -7,17 +8,44 @@ export default class Hero extends Component {
 
     this.props = {
       id: '',
+      itemId: '',
     };
   }
 
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
 
-    this.pageInfo = getPageInfo(this.props.id);
+    // For page hero
+    if (this.props.id != null) {
+      this.heroData = getPageInfo(this.props.id).hero;
+    }
+
+    // For item hero
+    if (this.props.itemid != null) {
+      const itemData = getItemById(this.props.itemid);
+      this.heroData = {
+        routingPath: [
+          { name: 'home', url: '../../index.html' },
+          {
+            name: itemData.category,
+            url: `./section.html?id=${itemData.category}`,
+          },
+          {
+            name: itemData.type,
+            url: `./search.html?id=${itemData.type_internal}`,
+          },
+          { name: itemData.title, url: `` },
+        ],
+        barcode: {
+          body: itemData.decor,
+        },
+      };
+
+      console.log(this.heroData);
+    }
 
     // Setting up breadcrumbs
     this.createBreadCrumbs(templateClone);
-
     // Set barcode
     this.createBarcode(templateClone);
 
@@ -28,7 +56,7 @@ export default class Hero extends Component {
     const breadcrumbs1 = templateClone.querySelector('#breadcrumbs1');
     const breadcrumbs2 = templateClone.querySelector('#breadcrumbs2');
 
-    this.pageInfo.hero.routingPath.map((value, index) => {
+    this.heroData.routingPath.map((value, index) => {
       console.log(value);
 
       const item1 = document.createElement('a');
@@ -40,7 +68,7 @@ export default class Hero extends Component {
       item1.setAttribute('href', value.url);
       item2.setAttribute('href', value.url);
 
-      if (index != this.pageInfo.hero.routingPath.length - 1) {
+      if (index != this.heroData.routingPath.length - 1) {
         item1.classList.add('hero__breadcrumbs--link');
         item2.classList.add('hero__breadcrumbs--link');
 
@@ -62,6 +90,6 @@ export default class Hero extends Component {
 
   createBarcode(templateClone) {
     const barcode = templateClone.querySelector('app-barcode');
-    barcode.setAttribute('body', this.pageInfo.hero.barcode.body);
+    barcode.setAttribute('body', this.heroData.barcode.body);
   }
 }
