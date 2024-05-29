@@ -137,7 +137,59 @@ function onAddItem() {
 
 // Add to cart
 function onAddToCart() {
-  alert('Added to cart!');
+  const button = document.getElementById('addToCart');
+
+  try {
+    addItemToCart();
+    console.log(localStorage.getItem('cart'));
+
+    button.innerText = 'SUCCESS!';
+    button.classList.add('button--success');
+
+    button.addEventListener('mouseout', () => {
+      setTimeout(() => {
+        button.classList.remove('button--success');
+        button.innerText = 'ADD TO CART';
+      }, 800);
+    });
+  } catch (e) {
+    alert('Oops something went wrong! Please try again later');
+  }
+}
+
+function addItemToCart() {
+  let cart = JSON.parse(localStorage.getItem('cart'));
+
+  if (cart) {
+    let duplicate = false;
+    // For duplicated items quantity is replaced not added
+    cart.forEach((value) => {
+      if (value.itemId == parseInt(id) && value.productIndex == activeItem) {
+        value.quantity = quantity;
+        duplicate = true;
+      }
+    });
+
+    if (!duplicate) {
+      let newItem = {
+        itemId: parseInt(id),
+        productIndex: activeItem,
+        quantity: quantity,
+      };
+
+      cart.push(newItem);
+    }
+  } else {
+    cart = [
+      {
+        itemId: parseInt(id),
+        productIndex: activeItem,
+        quantity: quantity,
+      },
+    ];
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 globalThis.onSelectProduct = onSelectProduct;

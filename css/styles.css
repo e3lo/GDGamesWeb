@@ -52,6 +52,11 @@ button,
   color: var(--cream);
 }
 
+.button--success {
+  background-color: var(--green);
+  color: var(--cream);
+}
+
 button:hover {
   transform: scale(1.05);
   cursor: pointer;
