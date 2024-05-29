@@ -32,7 +32,13 @@
       <section class="cart">
         <button onclick="onCheckout()">Checkout</button>
         <div class="checkout-list">
-          <app-checkout-item quantity="1"></app-checkout-item>
+          <app-checkout-item
+            index="0"
+            qty="1"
+            price="55"
+            shipping="true"
+            subtotal=""
+          ></app-checkout-item>
         </div>
       </section>
       <app-footer></app-footer>
@@ -134,7 +140,11 @@
   </template>
   <template id="app-checkout-item">
     <div class="checkout-item">
-      <div class="checkout-item__title">hi</div>
+      <div class="checkout-item__title">
+        <img class="checkout-item__img" src="/assets/products/GoW.webp" />
+        <b -text="title" class="GD__text--lg">GOD OF WAR</b>
+        <p -text="product-title">PS5 Digital</p>
+      </div>
       <div class="checkout-item__qty">
         <div class="item-quantity__overview" onclick="onQuantityToggle()">
           <span>QTY: </span>
@@ -150,7 +160,19 @@
           <button onclick="onAddItem(event)">+</button>
         </div>
       </div>
-      <div class="checkout-item__data">bello</div>
+      <div class="checkout-item__data">
+        <div class="checkout-item__grid">
+          <b>Price</b>
+          <p id="price">$59</p>
+          <b>QTY</b>
+          <p id="qty">2</p>
+          <b>Shipping</b>
+          <p id="shipping">Free</p>
+        </div>
+        <div class="checkout-item__subtotal">
+          <b>Subtotal</b><span id="subtotal">$59</span>
+        </div>
+      </div>
     </div>
   </template>
   <script type="module" src="../../js/pages/cart.js"></script>

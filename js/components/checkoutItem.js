@@ -6,7 +6,10 @@ export default class CheckoutItem extends Component {
 
     this.props = {
       body: '',
-      quantity: '',
+      qty: '',
+      price: '',
+      shipping: '',
+      subtotal: '',
     };
 
     this.onQuantityToggle = this.onQuantityToggle.bind(this);
@@ -19,12 +22,39 @@ export default class CheckoutItem extends Component {
 
   createElement(parentNode) {
     const templateClone = super.createElement(parentNode);
+
+    //  Setting data
+    const price = templateClone.querySelector('#price');
+    const qty = templateClone.querySelector('#qty');
+    const shipping = templateClone.querySelector('#shipping');
+    const subtotal = templateClone.querySelector('#subtotal');
+
+    let shippingCost = parentNode.getAttribute('shipping') === 'true' ? 10 : 0;
+
+    price.innerText = '$' + parentNode.getAttribute('price');
+    qty.innerText = parentNode.getAttribute('qty');
+    shipping.innerText =
+      parentNode.getAttribute('shipping') === 'true' ? '$10' : 'Free';
+    subtotal.innerText = `$${
+      shippingCost +
+      parseInt(
+        parentNode.getAttribute('price') *
+          parseInt(parentNode.getAttribute('qty'))
+      )
+    }`;
+
     return templateClone;
   }
 
   setQuantity(item, value) {
     const quantityDisplay = item.querySelector('#item-quantity__value');
     quantityDisplay.innerHTML = value;
+
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let itemData = cart[parseInt(item.getAttribute('index'))];
+    itemData.quantity = value;
+    localStorage.setItem('cart', JSON.stringify(cart));
+
     item.setAttribute('quantity', value);
   }
 
