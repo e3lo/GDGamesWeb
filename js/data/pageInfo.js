@@ -1,6 +1,8 @@
 const pageInfo = {
   playstation: {
     hero: {
+      title: 'Super Idol',
+      body: 'Another one',
       routingPath: [
         { name: 'home', url: '../../index.html' },
         { name: 'playstation', url: '' },
@@ -44,6 +46,8 @@ const pageInfo = {
 
   search_playstation_games: {
     hero: {
+      title: 'Super Idol',
+      body: 'Another one',
       routingPath: [
         { name: 'home', url: '../../index.html' },
         { name: 'playstation', url: './section.html?id=playstation' },

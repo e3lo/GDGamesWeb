@@ -13,8 +13,7 @@ export default class Hero extends Component {
   }
 
   createElement(parentNode) {
-    const templateClone = super.createElement(parentNode);
-
+    super.setProps(parentNode);
     // For page hero
     if (this.props.id != null) {
       this.heroData = getPageInfo(this.props.id).hero;
@@ -43,6 +42,10 @@ export default class Hero extends Component {
 
       console.log(this.heroData);
     }
+
+    this.props = this.heroData;
+    super.setAttributes(parentNode);
+    const templateClone = super.createElementWithoutReset(parentNode);
 
     // Setting up breadcrumbs
     this.createBreadCrumbs(templateClone);
