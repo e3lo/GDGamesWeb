@@ -1,9 +1,13 @@
 .item-info {
   margin-top: -16rem;
   width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .selection {
@@ -85,4 +89,28 @@
 
 .cart__button {
   margin: 0 2rem;
+}
+
+@media (min-width: 1024px) {
+  .item-info {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  app-slideshow {
+    width: 60%;
+    max-width: 800px;
+  }
+
+  .selection {
+    margin-top: 0;
+    padding-top: 0;
+    border: none;
+    width: auto;
+  }
+
+  .selection__options {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
