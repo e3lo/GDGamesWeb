@@ -15,14 +15,16 @@ export default class Hero extends Component {
   createElement(parentNode) {
     super.setProps(parentNode);
     // For page hero
-    if (this.props.id != null) {
+    if (getPageInfo(this.props.id) != null) {
       this.heroData = getPageInfo(this.props.id).hero;
     }
 
     // For item hero
-    if (this.props.itemid != null) {
+    if (getItemById(this.props.itemid) != null) {
       const itemData = getItemById(this.props.itemid);
       this.heroData = {
+        title: itemData.title,
+        body: '',
         routingPath: [
           { name: 'home', url: '../../index.html' },
           {
