@@ -108,6 +108,20 @@
   line-height: 1.5rem;
 }
 
+.recommened {
+  margin-top: 2rem;
+  max-width: 1200px;
+}
+
+.recommened-title {
+  border-top: 2px solid var(--cream30);
+  padding: 2rem;
+}
+
+.recommened-title > p {
+  max-width: 600px;
+}
+
 @media (min-width: 640px) {
   .item-info {
     padding: 0 2rem;

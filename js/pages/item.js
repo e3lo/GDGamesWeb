@@ -69,6 +69,15 @@ const specs2 = document.getElementById('item-specs-lg');
 specs1.innerHTML = itemData.technical;
 specs2.innerHTML = itemData.technical;
 
+// Setting recommended
+const recommended = document.getElementById('recommened');
+itemData.similarItems.forEach((value) => {
+  const item = document.createElement('app-item');
+  item.setAttribute('id', value);
+
+  recommended.appendChild(item);
+});
+
 componentHandler.renderComponents(document);
 
 // Handling item
