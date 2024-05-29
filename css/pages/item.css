@@ -93,11 +93,13 @@
 .item-description__small {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   padding: 2rem;
 }
 
 .item-description__large {
   display: none;
+  gap: 2rem;
 }
 
 .item-description__text {

@@ -63,6 +63,12 @@ const description2 = document.getElementById('item-about-lg');
 description1.innerHTML = itemData.about;
 description2.innerHTML = itemData.about;
 
+// Setting specs
+const specs1 = document.getElementById('item-specs-sm');
+const specs2 = document.getElementById('item-specs-lg');
+specs1.innerHTML = itemData.technical;
+specs2.innerHTML = itemData.technical;
+
 componentHandler.renderComponents(document);
 
 // Handling item
