@@ -25,6 +25,7 @@ export default class Hero extends Component {
       this.heroData = {
         title: itemData.title,
         body: '',
+        background: itemData.bgImg,
         routingPath: [
           { name: 'home', url: '../../index.html' },
           {
@@ -53,6 +54,14 @@ export default class Hero extends Component {
     this.createBreadCrumbs(templateClone);
     // Set barcode
     this.createBarcode(templateClone);
+
+    // Set up background
+    const bg = templateClone.querySelector('.hero');
+    bg.style.background = `linear-gradient(rgba(23, 23, 23, 0.4), rgba(23, 23, 23, 1)),
+    url(${this.props.background})`;
+    bg.style.backgroundSize = 'cover';
+    bg.style.backgroundPosition = 'center';
+    bg.style.backgroundRepeat = 'no-repeat';
 
     return templateClone;
   }

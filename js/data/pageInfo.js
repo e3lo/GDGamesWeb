@@ -3,6 +3,7 @@ const pageInfo = {
     hero: {
       title: 'Super Idol',
       body: 'Another one',
+      background: '/assets/banners/GoW.webp',
       routingPath: [
         { name: 'home', url: '../../index.html' },
         { name: 'playstation', url: '' },

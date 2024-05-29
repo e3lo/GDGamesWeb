@@ -47,10 +47,10 @@ const itemList = [
     type_internal: 'search_playstation_games',
     title: 'Spiderman',
     decor: 'Critically Acclaimed',
-    bgImg: '/assets/banners/GoW.webp',
+    bgImg: '/assets/banners/nier.jpg',
     tags: 'Co-op, FPS',
     cta: 'View Item',
-    productImg: ['/assets/products/GoW.webp'],
+    productImg: ['/assets/products/spiderman.jpg'],
     productOptions: [
       {
         title: 'PS5 Digital',

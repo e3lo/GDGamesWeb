@@ -30,6 +30,12 @@ const currentUrl = new URL(window.location.href);
 const urlParams = new URLSearchParams(currentUrl.search);
 const id = urlParams.get('id');
 
+// Setting components
+const appHero = document.querySelector('app-hero');
+const appSlideshow = document.querySelector('app-slideshow');
+appHero.setAttribute('itemid', id);
+appSlideshow.setAttribute('itemid', id);
+
 const itemData = getItemById(id);
 console.log(itemData);
 
