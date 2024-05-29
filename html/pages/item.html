@@ -36,11 +36,28 @@
         <div class="selection">
           <h2 id="item-title" class="GD__text--xl"></h2>
           <div class="selection__options"></div>
+          <div class="item-quantity">
+            <div class="item-quantity__overview" onclick="onQuantityToggle()">
+              <span>QTY: </span>
+              <span id="item-quantity__value">1</span>
+              <span class="material-symbols-outlined item-quantity__icon">
+                keyboard_arrow_down
+              </span>
+            </div>
+            <div class="item-quantity__details">
+              <button class="button--outline" onclick="onMinusItem()">-</button>
+              <button onclick="onAddItem()">+</button>
+            </div>
+          </div>
+          <button class="cart__button" onclick="onAddToCart()">
+            ADD TO CART
+          </button>
         </div>
       </section>
       <app-footer></app-footer>
     </main>
   </body>
+
   <!-- TEMPLATES  -->
   <template id="app-barcode">
     <div class="barcode">

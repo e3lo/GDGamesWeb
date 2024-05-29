@@ -8,6 +8,11 @@
   flex-direction: column;
 }
 
+.item-option.active {
+  border: 1px solid var(--green);
+  background-color: var(--green10);
+}
+
 .item-option__title {
   font-weight: 700;
   font-size: 1.25rem;

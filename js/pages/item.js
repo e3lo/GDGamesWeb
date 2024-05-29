@@ -48,12 +48,79 @@ itemTitle.innerText = itemData.title;
 
 // Setting item options
 const itemSelections = document.querySelector('.selection__options');
-itemData.productOptions.forEach((value) => {
+itemData.productOptions.forEach((value, index) => {
   const item = document.createElement('app-item-option');
   for (let key in value) {
     item.setAttribute(key, value[key]);
   }
+  item.setAttribute('onclick', `onSelectProduct(${index})`);
   itemSelections.appendChild(item);
 });
 
 componentHandler.renderComponents(document);
+
+// Handling item
+let activeItem = 0;
+let quantity = 1;
+
+function setQuantity(value) {
+  const quantityDisplay = document.getElementById('item-quantity__value');
+  quantityDisplay.innerHTML = value;
+  quantity = value;
+}
+
+function getQuantity() {
+  return quantity;
+}
+
+function onSelectProduct(index) {
+  activeItem = index;
+  setQuantity(1);
+
+  Array.from(itemSelections.children).forEach((value, item) => {
+    console.log(index);
+    if (item == index) {
+      value.children[0].classList.add('active');
+    } else {
+      value.children[0].classList.remove('active');
+    }
+  });
+}
+
+// Handling Qty
+function onQuantityToggle() {
+  const quantityDetails = document.querySelector('.item-quantity__details');
+
+  if (quantityDetails.classList.contains('show')) {
+    quantityDetails.classList.remove('show');
+  } else {
+    quantityDetails.classList.add('show');
+  }
+}
+
+function onMinusItem() {
+  if (getQuantity() > 0) {
+    setQuantity(getQuantity() - 1);
+  }
+  console.log(getQuantity());
+}
+
+function onAddItem() {
+  if (getQuantity() < itemData.productOptions[activeItem].stock) {
+    setQuantity(getQuantity() + 1);
+  } else {
+    alert('Sorry! This is all the stock available!');
+  }
+  console.log(getQuantity());
+}
+
+// Add to cart
+function onAddToCart() {
+  alert('Added to cart!');
+}
+
+globalThis.onSelectProduct = onSelectProduct;
+globalThis.onQuantityToggle = onQuantityToggle;
+globalThis.onMinusItem = onMinusItem;
+globalThis.onAddItem = onAddItem;
+globalThis.onAddToCart = onAddToCart;
