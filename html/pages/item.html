@@ -32,7 +32,13 @@
       <app-hero itemid="0"></app-hero>
       <section class="item-info">
         <button class="mobile">ADD TO CART</button>
-        <app-slideshow itemid="0"></app-slideshow>
+        <div class="item-mainbar">
+          <app-slideshow itemid="0"></app-slideshow>
+          <section class="item-description__large">
+            <h2 class="GD__text--xl">About</h2>
+            <p class="item-description__text" id="item-about-lg"></p>
+          </section>
+        </div>
         <div class="selection">
           <h2 id="item-title" class="GD__text--xl"></h2>
           <div class="selection__options"></div>
@@ -53,6 +59,10 @@
             ADD TO CART
           </button>
         </div>
+      </section>
+      <section class="item-description__small">
+        <h2 class="GD__text--xl">About</h2>
+        <p class="item-description__text" id="item-about-sm"></p>
       </section>
       <app-footer></app-footer>
     </main>

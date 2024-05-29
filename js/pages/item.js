@@ -57,6 +57,12 @@ itemData.productOptions.forEach((value, index) => {
   itemSelections.appendChild(item);
 });
 
+// Setting description
+const description1 = document.getElementById('item-about-sm');
+const description2 = document.getElementById('item-about-lg');
+description1.innerHTML = itemData.about;
+description2.innerHTML = itemData.about;
+
 componentHandler.renderComponents(document);
 
 // Handling item
