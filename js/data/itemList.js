@@ -428,7 +428,7 @@ const itemList = [
 
   // PC
   {
-    id: 8,
+    id: 12,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -458,7 +458,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 3,
+    id: 13,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -490,7 +490,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 4,
+    id: 14,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -528,7 +528,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 6,
+    id: 15,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -558,7 +558,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 8,
+    id: 16,
     category: 'xbox',
     type: 'videoGame',
     type_internal: 'search_xbox_games',
@@ -589,7 +589,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 10,
+    id: 17,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -620,7 +620,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 12,
+    id: 18,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -657,7 +657,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 13,
+    id: 19,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -687,7 +687,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
   {
-    id: 10,
+    id: 20,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
