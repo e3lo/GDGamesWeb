@@ -14,6 +14,7 @@ export default class Navigation extends Component {
       { name: 'Home', link: '/index.html' },
       { name: 'Xbox', link: '/html/pages/section.html?id=xbox' },
       { name: 'PS5', link: '/html/pages/section.html?id=playstation' },
+      { name: 'PC', link: '/html/pages/section.html?id=pc' },
       { name: 'My cart', link: '/html/pages/cart.html' },
     ];
 

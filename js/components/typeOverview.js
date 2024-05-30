@@ -45,6 +45,10 @@ export default class TypeOverview extends Component {
       templateClone.querySelector('.type-section__bento__stat'),
       `url(${this.props.src2})`
     );
+    this.setImage(
+      templateClone.querySelector('.type-section__bento__item'),
+      `url(${this.props.src3})`
+    );
 
     const itemSection = templateClone.querySelector('.type-collection');
     this.props.items.forEach((value) => {

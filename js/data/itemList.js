@@ -82,14 +82,14 @@ const itemList = [
     id: 2,
     category: 'ps5',
     type: 'videoGame',
-    type_internal: 'search_ps5_games',
+    type_internal: 'search_playstation_games',
     title: 'Helldivers II',
     decor: 'Best Co-op',
     bgImg: '/assets/products/helldivers/bg.webp',
     tags: 'Co-op, Online, Shooter',
     cta: 'View Item',
     productImg: [
-      '/assets/products/helldivers/1.jpg',
+      '/assets/products/helldivers/1.webp',
       '/assets/products/helldivers/2.jpg',
       '/assets/products/helldivers/3.jpg',
     ],
@@ -104,7 +104,7 @@ const itemList = [
       {
         title: 'PS5 Physical',
         price: 76,
-        decor: '<s>2 Day Delivery!</s>',
+        decor: '2 Day Delivery!',
         stock: 10,
         physical: true,
       },
@@ -251,7 +251,7 @@ const itemList = [
     similarItems: [1, 2, 3],
   },
 
-  // XBOX
+  // XBOX - 7
   {
     id: 7,
     category: 'xbox',
@@ -331,7 +331,7 @@ const itemList = [
     tags: 'Co-op, Online, Shooter',
     cta: 'View Item',
     productImg: [
-      '/assets/products/helldivers/1.jpg',
+      '/assets/products/helldivers/1.webp',
       '/assets/products/helldivers/2.jpg',
       '/assets/products/helldivers/3.jpg',
     ],
@@ -425,10 +425,41 @@ const itemList = [
       'Language : English <br/> Release Date : 21 April 2024 <br/> Console: Xbox',
     similarItems: [1, 2, 3],
   },
+  {
+    id: 12,
+    category: 'xbox',
+    type: 'videoGame',
+    type_internal: 'search_xbox_games',
+    title: 'Silksong',
+    decor: 'Best Indie Game',
+    bgImg: '/assets/products/silksong/bg.webp',
+    tags: 'Singleplayer, Platformer, Story',
+    cta: 'View Item',
+    productImg: [
+      '/assets/products/silksong/1.webp',
+      '/assets/products/silksong/2.jpg',
+      '/assets/products/silksong/3.jpg',
+      '/assets/products/silksong/4.webp',
+    ],
+    productOptions: [
+      {
+        title: 'XBOX Digital',
+        price: 24,
+        decor: 'Instant Code',
+        stock: 10,
+        physical: false,
+      },
+    ],
+    about:
+      '<h3>Become the Princess Knight</h3>Play as Hornet, princess-protector of Hallownest, and adventure through a whole new kingdom ruled by silk and song! Captured and brought to this unfamiliar world, Hornet must battle foes and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak<br/><br/>Hollow Knight: Silksong is the epic sequel to Hollow Knight, the award winning action-adventure. As the lethal hunter Hornet, journey to all-new lands, discover new powers, battle vast hordes of bugs and beasts and uncover ancient secrets tied to your nature and your past.',
+    technical:
+      'Language : English <br/> Release Date : 9 May 2024 <br/> Console: Xbox',
+    similarItems: [1, 2, 3],
+  },
 
   // PC
   {
-    id: 12,
+    id: 13,
     category: 'pc',
     type: 'videoGame',
     type_internal: 'search_pc_games',
@@ -455,38 +486,6 @@ const itemList = [
       "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!",
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Min OS: Windows 10 <br/> Age Rating: PG',
-    similarItems: [1, 2, 3],
-  },
-  {
-    id: 13,
-    category: 'pc',
-    type: 'videoGame',
-    type_internal: 'search_pc_games',
-    title: 'NieR:Automata',
-    decor: 'Soundtrack Game Award',
-    bgImg: '/assets/products/nier/bg.jpg',
-    tags: 'Singleplayer, Story, Action',
-    cta: 'View Item',
-    productImg: [
-      '/assets/products/nier/1.jpg',
-      '/assets/products/nier/2.jpg',
-      '/assets/products/nier/3.webp',
-      '/assets/products/nier/4.jpg',
-    ],
-    productOptions: [
-      {
-        title: 'PC Game of the Yorha Ed.',
-        price: 29,
-        decor: '<s>$79</s>',
-        stock: 10,
-        physical: false,
-      },
-    ],
-    about:
-      'NieR: Automata tells the story of androids 2B, 9S, and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.<br/><br/>Humanity has been driven from the Earth by mechanical beings from another world. In a final effort to take back the planet, the human resistance sends a force of android soldiers to destroy the invaders. Now, a war between machines and androids rages on... A war that could soon unveil a long-forgotten truth of the world.</p> <h3>Key Features:</h3> <ul> <li><strong>Action-Packed Battles</strong> – Players will switch between using melee and ranged attacks in battle against hordes of enemies and challenging bosses across a variety of open field maps. The tight controls and incredibly fluid combat are simple to learn for newcomers while offering plenty of depth for more experienced action gamers. Players can perform high-speed battle actions—combining light and heavy attacks—and switch through an arsenal of weaponry while evading enemies with speed and style.</li> <li><strong>Beautifully Desolate Open-World</strong> – The game seamlessly joins together hauntingly beautiful vistas and locations with no area loading. The environments are rendered in 60fps and contain a wealth of sub-events in addition to the main storyline.</li> <li><strong>Masterfully Crafted Story and Characters</strong> – NieR: Automata tells the story of androids 2B, 9S, and A2 and their ferocious battle to reclaim a machine-driven dystopia overrun by powerful weapons known as machine lifeforms.</li> <li><strong>Elements of an RPG</strong> – Players will obtain a variety of weapon types, level up in battle, learn new combat skills, and customise a loadout that caters to their playstyle.</li> <li><strong>Utilise the Pod Support System to Assist In and Outside of Battle</strong> – Pods can attack the enemy in both manual and lock-on modes. They can also assist outside of battle, such as allowing the player to glide through the air. Pods can be enhanced throughout the game, with upgrades including new attack methods and variations.</li> <li><strong>“Auto Mode” Available for Beginners</strong> – Novice players can elect “Auto Mode” for easy attacks and evasions.</li> </ul>',
-    technical:
-      'Language : English <br/> Package Dimensions: 17.1 x 13.4 x 1.4 cm; 90 Grams <br/> Release Date : 9 November 2018 <br/> Min OS: Windows 10',
-
     similarItems: [1, 2, 3],
   },
   {
@@ -538,7 +537,7 @@ const itemList = [
     tags: 'Co-op, Online, Shooter',
     cta: 'View Item',
     productImg: [
-      '/assets/products/helldivers/1.jpg',
+      '/assets/products/helldivers/1.webp',
       '/assets/products/helldivers/2.jpg',
       '/assets/products/helldivers/3.jpg',
     ],
@@ -714,6 +713,38 @@ const itemList = [
       "It's time for your Ultimate Horizon Adventure! Explore Mexico's bright and constantly changing open world landscapes while engaging in endless, enjoyable driving action in hundreds of the most significant automobiles ever made.",
     technical:
       'Language : English <br/> Release Date : 12 April 2024 <br/> Min OS: Windows 10',
+    similarItems: [1, 2, 3],
+  },
+  {
+    id: 21,
+    category: 'pc',
+    type: 'videoGame',
+    type_internal: 'search_pc_games',
+    title: 'NieR:Automata',
+    decor: 'Soundtrack Game Award',
+    bgImg: '/assets/products/nier/bg.jpg',
+    tags: 'Singleplayer, Story, Action',
+    cta: 'View Item',
+    productImg: [
+      '/assets/products/nier/1.jpg',
+      '/assets/products/nier/2.jpg',
+      '/assets/products/nier/3.webp',
+      '/assets/products/nier/4.jpg',
+    ],
+    productOptions: [
+      {
+        title: 'PC Game of the Yorha Ed.',
+        price: 29,
+        decor: '<s>$79</s>',
+        stock: 10,
+        physical: false,
+      },
+    ],
+    about:
+      'NieR: Automata tells the story of androids 2B, 9S, and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.<br/><br/>Humanity has been driven from the Earth by mechanical beings from another world. In a final effort to take back the planet, the human resistance sends a force of android soldiers to destroy the invaders. Now, a war between machines and androids rages on... A war that could soon unveil a long-forgotten truth of the world.</p> <h3>Key Features:</h3> <ul> <li><strong>Action-Packed Battles</strong> – Players will switch between using melee and ranged attacks in battle against hordes of enemies and challenging bosses across a variety of open field maps. The tight controls and incredibly fluid combat are simple to learn for newcomers while offering plenty of depth for more experienced action gamers. Players can perform high-speed battle actions—combining light and heavy attacks—and switch through an arsenal of weaponry while evading enemies with speed and style.</li> <li><strong>Beautifully Desolate Open-World</strong> – The game seamlessly joins together hauntingly beautiful vistas and locations with no area loading. The environments are rendered in 60fps and contain a wealth of sub-events in addition to the main storyline.</li> <li><strong>Masterfully Crafted Story and Characters</strong> – NieR: Automata tells the story of androids 2B, 9S, and A2 and their ferocious battle to reclaim a machine-driven dystopia overrun by powerful weapons known as machine lifeforms.</li> <li><strong>Elements of an RPG</strong> – Players will obtain a variety of weapon types, level up in battle, learn new combat skills, and customise a loadout that caters to their playstyle.</li> <li><strong>Utilise the Pod Support System to Assist In and Outside of Battle</strong> – Pods can attack the enemy in both manual and lock-on modes. They can also assist outside of battle, such as allowing the player to glide through the air. Pods can be enhanced throughout the game, with upgrades including new attack methods and variations.</li> <li><strong>“Auto Mode” Available for Beginners</strong> – Novice players can elect “Auto Mode” for easy attacks and evasions.</li> </ul>',
+    technical:
+      'Language : English <br/> Package Dimensions: 17.1 x 13.4 x 1.4 cm; 90 Grams <br/> Release Date : 9 November 2018 <br/> Min OS: Windows 10',
+
     similarItems: [1, 2, 3],
   },
 ];
