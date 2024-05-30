@@ -40,7 +40,6 @@ appHero.setAttribute('itemid', id);
 appSlideshow.setAttribute('itemid', id);
 
 const itemData = getItemById(id);
-console.log(itemData);
 
 // Setting Title
 const itemTitle = document.getElementById('item-title');
@@ -54,6 +53,7 @@ itemData.productOptions.forEach((value, index) => {
     item.setAttribute(key, value[key]);
   }
   item.setAttribute('onclick', `onSelectProduct(${index})`);
+
   itemSelections.appendChild(item);
 });
 
@@ -79,6 +79,9 @@ itemData.similarItems.forEach((value) => {
 });
 
 componentHandler.renderComponents(document);
+
+// Setting first item as active
+document.querySelector('.item-option').classList.add('active');
 
 // Handling item
 let activeItem = 0;
@@ -123,7 +126,6 @@ function onMinusItem() {
   if (getQuantity() > 0) {
     setQuantity(getQuantity() - 1);
   }
-  console.log(getQuantity());
 }
 
 function onAddItem() {
@@ -132,7 +134,6 @@ function onAddItem() {
   } else {
     alert('Sorry! This is all the stock available!');
   }
-  console.log(getQuantity());
 }
 
 // Add to cart

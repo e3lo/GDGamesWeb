@@ -96,8 +96,6 @@ export default class CheckoutItem extends Component {
         '.item-quantity__details'
       );
 
-    console.log(quantityDetails);
-
     if (quantityDetails.classList.contains('show')) {
       quantityDetails.classList.remove('show');
     } else {
