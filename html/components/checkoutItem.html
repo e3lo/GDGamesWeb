@@ -1,0 +1,37 @@
+<template id="app-checkout-item">
+  <div class="checkout-item">
+    <div class="checkout-item__title">
+      <img class="checkout-item__img" src="/assets/products/GoW.webp" />
+      <div class="checkout-item__title__text">
+        <b -text="title" class="GD__text--lg">GOD OF WAR</b>
+        <p -text="product-title">PS5 Digital</p>
+      </div>
+    </div>
+    <div class="checkout-item__qty">
+      <div class="item-quantity__overview" onclick="onQuantityToggle(event)">
+        <span>QTY: </span>
+        <span id="item-quantity__value" -text="qty">1</span>
+        <span class="material-symbols-outlined item-quantity__icon">
+          keyboard_arrow_down
+        </span>
+      </div>
+      <div class="item-quantity__details">
+        <button class="button--outline" onclick="onMinusItem(event)">-</button>
+        <button onclick="onAddItem(event)">+</button>
+      </div>
+    </div>
+    <div class="checkout-item__data">
+      <div class="checkout-item__grid">
+        <b>Price</b>
+        <p id="price">$59</p>
+        <b>QTY</b>
+        <p id="qty">2</p>
+        <b>Shipping</b>
+        <p id="shipping">Free</p>
+      </div>
+      <div class="checkout-item__subtotal">
+        <b>Subtotal</b><span id="subtotal">$59</span>
+      </div>
+    </div>
+  </div>
+</template>
