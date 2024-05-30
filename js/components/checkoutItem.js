@@ -55,6 +55,9 @@ export default class CheckoutItem extends Component {
     if (value == 0) {
       if (window.confirm('Do you want to remove this item from your cart?')) {
         this.removeItem(item);
+        // Setting event
+        const event = new Event('onSubtotalChange');
+        item.dispatchEvent(event);
       }
       return;
     }
