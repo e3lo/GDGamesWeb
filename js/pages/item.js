@@ -195,8 +195,18 @@ function addItemToCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+function onScrollAddToCart() {
+  const ctaButton = document.getElementById('addToCart');
+  ctaButton.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest',
+  });
+}
+
 globalThis.onSelectProduct = onSelectProduct;
 globalThis.onQuantityToggle = onQuantityToggle;
 globalThis.onMinusItem = onMinusItem;
 globalThis.onAddItem = onAddItem;
 globalThis.onAddToCart = onAddToCart;
+globalThis.onScrollAddToCart = onScrollAddToCart;
