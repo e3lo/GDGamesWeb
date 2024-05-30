@@ -30,7 +30,7 @@
     <main>
       <app-navigation></app-navigation>
       <!-- Hero -->
-      <section class="landing-hero">
+      <header class="landing-hero">
         <ol class="landing-hero__items" id="hero-list">
           <!-- Featured Items -->
           <li class="landing-hero__items__display">
@@ -74,7 +74,7 @@
             <li onclick="changeActive(2)"></li>
           </ol>
         </div>
-      </section>
+      </header>
 
       <!-- Store Category -->
       <section class="store-category">
@@ -176,13 +176,13 @@
         <div class="GD__text--logo clickable" onclick="onLinkClick('Home')">
           GD GAMES
         </div>
-        <ul class="nav__links"></ul>
+        <menu class="nav__links"></menu>
         <span class="GD__icon nav__menu" onclick="onMobileNavClick(event)"
           >menu</span
         >
       </div>
       <div id="nav__popup">
-        <ul class="nav__links--mobile GD__text--lg"></ul>
+        <menu class="nav__links--mobile GD__text--lg"></menu>
       </div>
     </nav>
   </template>
