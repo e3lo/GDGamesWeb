@@ -1,3 +1,21 @@
+.item-description__text strong {
+  font-weight: 700;
+}
+
+.item-description__text ul {
+  list-style-type: disc;
+}
+
+.item-description__text li {
+  padding-bottom: 1rem;
+}
+
+.item-description__text h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
 .item-info {
   margin-top: -16rem;
   width: 100%;
@@ -106,6 +124,8 @@
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .recommened {

@@ -59,7 +59,7 @@ const pageInfo = {
     },
 
     featured: {
-      collection: [0, 1, 1],
+      collection: [0, 1, 2],
     },
 
     section: [
