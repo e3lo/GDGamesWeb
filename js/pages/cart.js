@@ -28,25 +28,27 @@ componentHandler
   .register(checkoutItem);
 
 // Render Checkout Items
-const cart = JSON.parse(localStorage.getItem('cart'));
-const checkoutList = document.querySelector('.checkout-list');
-cart.forEach((element, index) => {
-  const item = document.createElement('app-checkout-item');
-  const productData = getItemById(element.itemId);
-  const productType = productData.productOptions[element.productIndex];
+try {
+  const cart = JSON.parse(localStorage.getItem('cart'));
+  const checkoutList = document.querySelector('.checkout-list');
+  cart.forEach((element, index) => {
+    const item = document.createElement('app-checkout-item');
+    const productData = getItemById(element.itemId);
+    const productType = productData.productOptions[element.productIndex];
 
-  item.setAttribute('index', index);
-  item.setAttribute('qty', element.quantity);
-  item.setAttribute('price', productType.price);
-  item.setAttribute('shipping', productType.physical);
-  item.setAttribute('title', productData.title);
-  item.setAttribute('product-title', productType.title);
-  item.setAttribute('img', productData.productImg[0]);
+    item.setAttribute('index', index);
+    item.setAttribute('qty', element.quantity);
+    item.setAttribute('price', productType.price);
+    item.setAttribute('shipping', productType.physical);
+    item.setAttribute('title', productData.title);
+    item.setAttribute('product-title', productType.title);
+    item.setAttribute('img', productData.productImg[0]);
 
-  item.addEventListener('onSubtotalChange', calculateSubtotal);
+    item.addEventListener('onSubtotalChange', calculateSubtotal);
 
-  checkoutList.appendChild(item);
-});
+    checkoutList.appendChild(item);
+  });
+} catch (e) {}
 
 componentHandler.renderComponents(document);
 

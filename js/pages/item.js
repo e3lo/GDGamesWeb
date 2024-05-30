@@ -141,7 +141,6 @@ function onAddToCart() {
 
   try {
     addItemToCart();
-    console.log(localStorage.getItem('cart'));
 
     button.innerText = 'SUCCESS!';
     button.classList.add('button--success');
@@ -153,12 +152,15 @@ function onAddToCart() {
       }, 800);
     });
   } catch (e) {
-    alert('Oops something went wrong! Please try again later');
+    alert('Oops something went wrong! Please try again later' + e);
   }
 }
 
 function addItemToCart() {
-  let cart = JSON.parse(localStorage.getItem('cart'));
+  let cart = false;
+  if (localStorage.getItem('cart') == null) {
+    cart = JSON.parse(localStorage.getItem('cart'));
+  }
 
   if (cart) {
     let duplicate = false;

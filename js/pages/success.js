@@ -22,4 +22,6 @@ componentHandler
   .register(footer)
   .register(hero);
 
+localStorage.setItem('cart', '');
+
 componentHandler.renderComponents(document);

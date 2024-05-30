@@ -33,7 +33,6 @@ const urlParams = new URLSearchParams(currentUrl.search);
 const id = urlParams.get('id');
 
 const body = document.querySelectorAll('#id');
-console.log(body);
 body.forEach((value) => {
   value.setAttribute('id', id);
 });

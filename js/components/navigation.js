@@ -32,8 +32,6 @@ export default class Navigation extends Component {
     const navItems = templateClone.querySelector('.nav__links');
     const navItemsMobile = templateClone.querySelector('.nav__links--mobile');
 
-    console.log(navItems);
-
     this.links.map((value) => {
       let itemDesktop = document.createElement('li');
       itemDesktop.setAttribute('onclick', `onLinkClick('${value.name}')`);

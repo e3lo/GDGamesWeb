@@ -42,8 +42,6 @@ export default class Hero extends Component {
           body: itemData.decor,
         },
       };
-
-      console.log(this.heroData);
     }
 
     this.props = this.heroData;
@@ -71,8 +69,6 @@ export default class Hero extends Component {
     const breadcrumbs2 = templateClone.querySelector('#breadcrumbs2');
 
     this.heroData.routingPath.map((value, index) => {
-      console.log(value);
-
       const item1 = document.createElement('a');
       const item2 = document.createElement('a');
 
