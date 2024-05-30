@@ -16,6 +16,7 @@ export default class CategorySection extends Component {
       src1: '',
       src2: '',
       src3: '',
+      itemSrc: '',
       items: '',
     };
 
@@ -44,6 +45,11 @@ export default class CategorySection extends Component {
     this.setImage(
       templateClone.querySelector('.category-section__bento__img'),
       `url(${this.props.src3})`
+    );
+
+    this.setImage(
+      templateClone.querySelector('.category-section__bento__item'),
+      `linear-gradient(rgba(23, 23, 23, 0.6), rgba(23, 23, 23, 0.6)), url(${this.props.src4})`
     );
 
     // Setting the item list

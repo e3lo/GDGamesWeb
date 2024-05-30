@@ -71,10 +71,10 @@ const pageInfo = {
         description: 'Home to the best exclusive and award winning games',
         items: [3, 4, 5],
         src1: '/assets/banners/GoW.webp',
-        src2: '/assets/decor/ps5Games.webp',
+        src2: '/assets/products/horizon/1.avif',
         src3: '/assets/decor/ps5Games.webp',
         quote:
-          'Try out the new 2024 wireless controllers! It’s a lot better than you think </br> </br> - GD Games',
+          'Our favourite games below, absolutely stunning and life changing! Would recommend for anyone to try out </br> </br> - GD Games',
       },
     ],
   },
@@ -98,24 +98,8 @@ const pageInfo = {
       [1, 2, 3, 5],
       [2, 6, 1],
       [0, 1, 4, 5],
-      [6, 3],
+      [6, 3, 2],
     ],
-  },
-
-  search_playstation_hardware: {
-    hero: {
-      title: 'Super Idol',
-      body: 'Another one',
-      routingPath: [
-        { name: 'home', url: '../../index.html' },
-        { name: 'playstation', url: './section.html?id=playstation' },
-        { name: 'search', url: '' },
-      ],
-      barcode: {
-        body: 'GOD OF WAR',
-      },
-    },
-    items: [[0, 0, 0, 0, 0], [0, 0, 0], [0, 0, 1, 0], [1], [0, 0]],
   },
 
   xbox: {
@@ -183,42 +167,26 @@ const pageInfo = {
       [7, 8, 9, 12],
       [8, 10, 11],
       [12, 7],
-      [7, 12],
+      [7, 12, 11],
     ],
-  },
-
-  search_xbox_hardware: {
-    hero: {
-      title: 'Super Idol',
-      body: 'Another one',
-      routingPath: [
-        { name: 'home', url: '../../index.html' },
-        { name: 'playstation', url: './section.html?id=playstation' },
-        { name: 'search', url: '' },
-      ],
-      barcode: {
-        body: 'GOD OF WAR',
-      },
-    },
-    items: [[0, 0, 0, 0, 0], [0, 0, 0], [0, 0, 1, 0], [1], [0, 0]],
   },
 
   pc: {
     hero: {
       title: 'PC',
-      body: 'Experience the new generation of games and entertainment with Xbox',
-      background: '/assets/banners/forza.jpg',
+      body: 'Experience the freedom of PC and the wide options of games at GD Games!',
+      background: '/assets/products/helldivers/bg.webp',
       routingPath: [
         { name: 'home', url: '../../index.html' },
         { name: 'PC', url: '' },
       ],
       barcode: {
-        body: 'FORZA HORIZON 4',
+        body: 'HELLDIVERS II',
       },
     },
 
     featured: {
-      collection: [7, 8, 9],
+      collection: [13, 14, 15],
     },
 
     section: [
@@ -227,13 +195,14 @@ const pageInfo = {
         barcodeText: 'PC Games',
         type: 'games',
         title: 'Games',
-        description: 'Home to the best exclusive and award winning games',
-        items: [10, 11, 12],
-        src1: '/assets/products/forza/bg.jpg',
-        src2: '/assets/decor/xboxGames.jpg',
-        src3: '/assets/decor/xboxGames.jpg',
+        description:
+          'The cheapest and best PC videogames at GD Games. Instant email delivery',
+        items: [16, 17, 18],
+        src1: '/assets/products/nier/bg.jpg',
+        src2: '/assets/decor/pcGames.jpg',
+        src3: '/assets/decor/pcGames2.jpg',
         quote:
-          'Try out the new 2024 wireless controllers! It’s a lot better than you think </br> </br> - GD Games',
+          'Below is a collection of games we felt had a deep impact in our lives after finishing the game. The games that blend literature and gaming<br/><br/> --GD Games',
       },
     ],
   },
@@ -242,10 +211,10 @@ const pageInfo = {
     hero: {
       title: 'VIDEO GAMES',
       body: '',
-      background: '/assets/products/halo/bg.jpg',
+      background: '/assets/products/nier/bg.jpg',
       routingPath: [
         { name: 'home', url: '../../index.html' },
-        { name: 'xbox', url: './section.html?id=xbox' },
+        { name: 'pc', url: './section.html?id=pc' },
         { name: 'search', url: '' },
       ],
       barcode: {
@@ -253,11 +222,11 @@ const pageInfo = {
       },
     },
     items: [
-      [7, 8, 9, 10, 11, 12],
-      [7, 8, 9, 12],
-      [8, 10, 11],
-      [12, 7],
-      [7, 12],
+      [13, 14, 15, 16, 17, 18, 19, 20],
+      [13, 14, 17, 19],
+      [13, 15, 20],
+      [14, 16, 18, 19],
+      [13, 17, 18],
     ],
   },
 };

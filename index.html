@@ -115,28 +115,46 @@
         description="Home to the best exclusive and award winning games"
         stat="387+"
         statDescription="Games Available"
-        itemDescription="Limited Stock!"
-        itemTitle="PS5 Digital Edition"
+        item-description="Limited Stock!"
+        item-title="GOW PS5 Edition"
         featureId="0"
-        items="0,1,0"
+        items="6,5,3"
         src1="/assets/banners/GoW.webp"
         src2="/assets/decor/ps5Controller.jpg"
         src3="/assets/products/spiderman.jpg"
+        src4="/assets/products/gow/1.webp"
       ></app-category-section>
 
       <app-category-section
         id="xbox"
         title="XBOX"
-        description="Home to the best exclusive and award winning games"
-        stat="387+"
+        description="The home of the some of the most iconic games"
+        stat="357+"
+        stat-description="Games Available"
+        item-description="Limited Stock!"
+        item-title="HALO XBOX EDITION"
+        featureId="11"
+        items="7,9,11"
+        src1="/assets/banners/forza.jpg"
+        src2="/assets/decor/xboxGames.jpg"
+        src3="/assets/products/forza/1.webp"
+        src4="/assets/products/halo/1.jpg"
+      ></app-category-section>
+
+      <app-category-section
+        id="pc"
+        title="PC"
+        description="Shop our wide collection of massive PC Games"
+        stat="457+"
         statDescription="Games Available"
-        itemDescription="Limited Stock!"
-        itemTitle="PS5 Digital Edition"
-        featureId="0"
-        items="0,0,0"
-        src1="/assets/banners/GoW.webp"
-        src2="/assets/decor/ps5Controller.jpg"
-        src3="/assets/products/spiderman.jpg"
+        item-description="Limited Stock!"
+        item-title="YorHa Edition"
+        featureId="16"
+        items="13,15,18"
+        src1="/assets/banners/nier.jpg"
+        src2="/assets/decor/pcGames.jpg"
+        src3="/assets/products/stardew/2.jpg"
+        src4="/assets/products/nier/1.jpg"
       ></app-category-section>
 
       <app-footer></app-footer>
@@ -214,12 +232,10 @@
               </div>
               <div class="category-section__bento__img bento"></div>
               <div class="category-section__bento__item bento">
-                <p class="GD__text--sm" -text="itemDescription">
+                <p class="GD__text--sm" -text="item-description">
                   Limited Stock
                 </p>
-                <strong class="GD__text--lg" -text="itemTitle"
-                  >PS5 Digital Edition</strong
-                >
+                <p class="GD__text--lg" -text="item-title"></p>
                 <button class="bento__button" onclick="onSeeFeatured(event)">
                   Shop Now
                 </button>

@@ -76,7 +76,7 @@ const itemList = [
     technical:
       'Language : English <br/> Package Dimensions: 17.1 x 13.4 x 1.4 cm; 90 Grams <br/> Release Date : 9 November 2018 <br/> Console : PS5',
 
-    similarItems: [1, 2, 3],
+    similarItems: [0, 2, 3],
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ const itemList = [
       'HELLDIVERS™ 2 is a 3rd person squad-based shooter that sees the elite forces of the Helldivers battling to win an intergalactic struggle to rid the galaxy of the rising alien threats. From a 3rd person perspective, players use a variety of weapons (pistols, machine guns, flamethrowers) and stratagems (turrets, airstrikes, etc.) to shoot and kill the alien threats. Players can also aim down the sights for a more accurate 1st person camera view. Combat is accompanied by frequent sprays of blood and dismemberment as players exterminate the alien forces or players and squad mates are hit by environmental explosions or friendly fire. Enemy encampments and battlefield environments depict bloodstains and dismembered corpses.',
     technical:
       'Language : English <br/> Release Date : 9 April 2024 <br/> Console: PS5',
-    similarItems: [1, 2, 3],
+    similarItems: [1, 4, 3],
   },
   {
     id: 3,
@@ -144,7 +144,7 @@ const itemList = [
       '<h3>Become the Princess Knight</h3>Play as Hornet, princess-protector of Hallownest, and adventure through a whole new kingdom ruled by silk and song! Captured and brought to this unfamiliar world, Hornet must battle foes and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak<br/><br/>Hollow Knight: Silksong is the epic sequel to Hollow Knight, the award winning action-adventure. As the lethal hunter Hornet, journey to all-new lands, discover new powers, battle vast hordes of bugs and beasts and uncover ancient secrets tied to your nature and your past.',
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Console: Playstation',
-    similarItems: [1, 2, 3],
+    similarItems: [1, 2, 5],
   },
   {
     id: 4,
@@ -280,7 +280,7 @@ const itemList = [
       "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!",
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Console: Xbox <br/> Age Rating: PG',
-    similarItems: [1, 2, 3],
+    similarItems: [8, 9, 10],
   },
   {
     id: 8,
@@ -318,7 +318,7 @@ const itemList = [
       '<u>Survival</u><br/>In a harsh environment where food is scarce and vicious poachers roam, danger waits around every corner. To survive, you must tread carefully and make difficult choices...even if that means eating your own Pals when the time comes.<br/><br/><u>Mounts & Exploration</u></br>Pals can be mounted to traverse the land, sea and sky—allowing you to traverse all kinds of environment as you explore the world. <br/><br/><u>Multiplayer</u><br/>Multiplayer is supported, so invite a friend and go on an adventure together! And of course you can battle your friends and trade Pals, too.<br/>In online co-op play mode, up to 4 players can play together. Additionally, a dedicated server can allow up to 32 players to play together.<br/><br/><u>Dungeon Exploration</u><br/>With Pals on your side you can tackle even the most dangerous areas. When the time comes, you might have to sacrifice one to save your skin.',
     technical:
       'Language : English <br/> Release Date : 9 April 2024 <br/> Console : XBOX',
-    similarItems: [1, 2, 3],
+    similarItems: [7, 9, 10],
   },
   {
     id: 9,
@@ -348,7 +348,7 @@ const itemList = [
       'HELLDIVERS™ 2 is a 3rd person squad-based shooter that sees the elite forces of the Helldivers battling to win an intergalactic struggle to rid the galaxy of the rising alien threats. From a 3rd person perspective, players use a variety of weapons (pistols, machine guns, flamethrowers) and stratagems (turrets, airstrikes, etc.) to shoot and kill the alien threats. Players can also aim down the sights for a more accurate 1st person camera view. Combat is accompanied by frequent sprays of blood and dismemberment as players exterminate the alien forces or players and squad mates are hit by environmental explosions or friendly fire. Enemy encampments and battlefield environments depict bloodstains and dismembered corpses.',
     technical:
       'Language : English <br/> Release Date : 9 April 2024 <br/> Console: xbox',
-    similarItems: [1, 2, 3],
+    similarItems: [8, 11, 10],
   },
   {
     id: 10,
@@ -385,7 +385,7 @@ const itemList = [
       "It's time for your Ultimate Horizon Adventure! Explore Mexico's bright and constantly changing open world landscapes while engaging in endless, enjoyable driving action in hundreds of the most significant automobiles ever made.",
     technical:
       'Language : English <br/> Release Date : 12 April 2024 <br/> Console: Xbox',
-    similarItems: [1, 2, 3],
+    similarItems: [8, 9, 7],
   },
   {
     id: 11,
@@ -423,7 +423,7 @@ const itemList = [
       'When all hope is lost and humanity’s fate hangs in the balance, the Master Chief is ready to confront the most ruthless foe he’s ever faced. Step inside the armor of humanity’s greatest hero to experience an epic open-world adventure and explore the massive scale of the Halo ring.<br/><br/>With Network Campaign Co-Op and Mission Replay, you can relive your favorite moments, rediscover collectibles and explore the wonders of Zeta Halo on your own or with up to three other fireteam members.',
     technical:
       'Language : English <br/> Release Date : 21 April 2024 <br/> Console: Xbox',
-    similarItems: [1, 2, 3],
+    similarItems: [8, 9, 10],
   },
   {
     id: 12,
@@ -454,10 +454,10 @@ const itemList = [
       '<h3>Become the Princess Knight</h3>Play as Hornet, princess-protector of Hallownest, and adventure through a whole new kingdom ruled by silk and song! Captured and brought to this unfamiliar world, Hornet must battle foes and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak<br/><br/>Hollow Knight: Silksong is the epic sequel to Hollow Knight, the award winning action-adventure. As the lethal hunter Hornet, journey to all-new lands, discover new powers, battle vast hordes of bugs and beasts and uncover ancient secrets tied to your nature and your past.',
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Console: Xbox',
-    similarItems: [1, 2, 3],
+    similarItems: [8, 9, 10],
   },
 
-  // PC
+  // PC 13
   {
     id: 13,
     category: 'pc',
@@ -486,7 +486,7 @@ const itemList = [
       "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!",
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Min OS: Windows 10 <br/> Age Rating: PG',
-    similarItems: [1, 2, 3],
+    similarItems: [14, 15, 16],
   },
   {
     id: 14,
@@ -524,7 +524,7 @@ const itemList = [
       '<u>Survival</u><br/>In a harsh environment where food is scarce and vicious poachers roam, danger waits around every corner. To survive, you must tread carefully and make difficult choices...even if that means eating your own Pals when the time comes.<br/><br/><u>Mounts & Exploration</u></br>Pals can be mounted to traverse the land, sea and sky—allowing you to traverse all kinds of environment as you explore the world. <br/><br/><u>Multiplayer</u><br/>Multiplayer is supported, so invite a friend and go on an adventure together! And of course you can battle your friends and trade Pals, too.<br/>In online co-op play mode, up to 4 players can play together. Additionally, a dedicated server can allow up to 32 players to play together.<br/><br/><u>Dungeon Exploration</u><br/>With Pals on your side you can tackle even the most dangerous areas. When the time comes, you might have to sacrifice one to save your skin.',
     technical:
       'Language : English <br/> Release Date : 9 April 2024 <br/> Min OS: Windows 10',
-    similarItems: [1, 2, 3],
+    similarItems: [13, 15, 16],
   },
   {
     id: 15,
@@ -554,38 +554,39 @@ const itemList = [
       'HELLDIVERS™ 2 is a 3rd person squad-based shooter that sees the elite forces of the Helldivers battling to win an intergalactic struggle to rid the galaxy of the rising alien threats. From a 3rd person perspective, players use a variety of weapons (pistols, machine guns, flamethrowers) and stratagems (turrets, airstrikes, etc.) to shoot and kill the alien threats. Players can also aim down the sights for a more accurate 1st person camera view. Combat is accompanied by frequent sprays of blood and dismemberment as players exterminate the alien forces or players and squad mates are hit by environmental explosions or friendly fire. Enemy encampments and battlefield environments depict bloodstains and dismembered corpses.',
     technical:
       'Language : English <br/> Release Date : 9 April 2024 <br/> Minimum OS: Windows 10',
-    similarItems: [1, 2, 3],
+    similarItems: [14, 17, 16],
   },
   {
     id: 16,
-    category: 'xbox',
+    category: 'pc',
     type: 'videoGame',
-    type_internal: 'search_xbox_games',
-    title: 'Silksong',
-    decor: 'Best Indie Game',
-    bgImg: '/assets/products/silksong/bg.webp',
-    tags: 'Singleplayer, Platformer, Story',
+    type_internal: 'search_pc_games',
+    title: 'NieR:Automata',
+    decor: 'Soundtrack Game Award',
+    bgImg: '/assets/products/nier/bg.jpg',
+    tags: 'Singleplayer, Story, Action',
     cta: 'View Item',
     productImg: [
-      '/assets/products/silksong/1.webp',
-      '/assets/products/silksong/2.jpg',
-      '/assets/products/silksong/3.jpg',
-      '/assets/products/silksong/4.webp',
+      '/assets/products/nier/1.jpg',
+      '/assets/products/nier/2.jpg',
+      '/assets/products/nier/3.webp',
+      '/assets/products/nier/4.jpg',
     ],
     productOptions: [
       {
-        title: 'Xbox Digital Edition',
+        title: 'PC Game of the Yorha Ed.',
         price: 29,
-        decor: 'Instant Code',
+        decor: '<s>$79</s>',
         stock: 10,
         physical: false,
       },
     ],
     about:
-      '<h3>Become the Princess Knight</h3>Play as Hornet, princess-protector of Hallownest, and adventure through a whole new kingdom ruled by silk and song! Captured and brought to this unfamiliar world, Hornet must battle foes and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak<br/><br/>Hollow Knight: Silksong is the epic sequel to Hollow Knight, the award winning action-adventure. As the lethal hunter Hornet, journey to all-new lands, discover new powers, battle vast hordes of bugs and beasts and uncover ancient secrets tied to your nature and your past.',
+      'NieR: Automata tells the story of androids 2B, 9S, and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.<br/><br/>Humanity has been driven from the Earth by mechanical beings from another world. In a final effort to take back the planet, the human resistance sends a force of android soldiers to destroy the invaders. Now, a war between machines and androids rages on... A war that could soon unveil a long-forgotten truth of the world.</p> <h3>Key Features:</h3> <ul> <li><strong>Action-Packed Battles</strong> – Players will switch between using melee and ranged attacks in battle against hordes of enemies and challenging bosses across a variety of open field maps. The tight controls and incredibly fluid combat are simple to learn for newcomers while offering plenty of depth for more experienced action gamers. Players can perform high-speed battle actions—combining light and heavy attacks—and switch through an arsenal of weaponry while evading enemies with speed and style.</li> <li><strong>Beautifully Desolate Open-World</strong> – The game seamlessly joins together hauntingly beautiful vistas and locations with no area loading. The environments are rendered in 60fps and contain a wealth of sub-events in addition to the main storyline.</li> <li><strong>Masterfully Crafted Story and Characters</strong> – NieR: Automata tells the story of androids 2B, 9S, and A2 and their ferocious battle to reclaim a machine-driven dystopia overrun by powerful weapons known as machine lifeforms.</li> <li><strong>Elements of an RPG</strong> – Players will obtain a variety of weapon types, level up in battle, learn new combat skills, and customise a loadout that caters to their playstyle.</li> <li><strong>Utilise the Pod Support System to Assist In and Outside of Battle</strong> – Pods can attack the enemy in both manual and lock-on modes. They can also assist outside of battle, such as allowing the player to glide through the air. Pods can be enhanced throughout the game, with upgrades including new attack methods and variations.</li> <li><strong>“Auto Mode” Available for Beginners</strong> – Novice players can elect “Auto Mode” for easy attacks and evasions.</li> </ul>',
     technical:
-      'Language : English <br/> Release Date : 9 May 2024 <br/> Console: xbox',
-    similarItems: [1, 2, 3],
+      'Language : English <br/> Package Dimensions: 17.1 x 13.4 x 1.4 cm; 90 Grams <br/> Release Date : 9 November 2018 <br/> Min OS: Windows 10',
+
+    similarItems: [14, 15, 18],
   },
   {
     id: 17,
@@ -615,8 +616,8 @@ const itemList = [
     about:
       '<h3>Become the Princess Knight</h3>Play as Hornet, princess-protector of Hallownest, and adventure through a whole new kingdom ruled by silk and song! Captured and brought to this unfamiliar world, Hornet must battle foes and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak<br/><br/>Hollow Knight: Silksong is the epic sequel to Hollow Knight, the award winning action-adventure. As the lethal hunter Hornet, journey to all-new lands, discover new powers, battle vast hordes of bugs and beasts and uncover ancient secrets tied to your nature and your past.',
     technical:
-      'Language : English <br/> Release Date : 9 May 2024 <br/> Console: xbox',
-    similarItems: [1, 2, 3],
+      'Language : English <br/> Release Date : 9 May 2024 <br/> Minimum Operating System: Windows 10 <br/> Memory: 16gb',
+    similarItems: [14, 15, 16],
   },
   {
     id: 18,
@@ -653,7 +654,7 @@ const itemList = [
       'Final Fantasy VII Remake Intergrade is an enhanced and expanded version of the critically acclaimed and award-winning PS5 Final Fantasy VII Remake for the PlayStation 5. PS5 Final Fantasy VII Remake Intergrade comes bundled with the brand-new episode featuring Yuffie as the main character which introduces an exhilarating new story arc, and numerous gameplay additions for players to enjoy.',
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Minimum Operating System: Windows 10 <br/> Memory: 16gb',
-    similarItems: [1, 2, 3],
+    similarItems: [14, 15, 16],
   },
   {
     id: 19,
@@ -683,7 +684,7 @@ const itemList = [
       "Join Aloy as she braves the Forbidden West – a majestic but dangerous frontier that conceals mysterious new threats.<br/><br/>Explore distant lands, fight bigger and more awe-inspiring machines, and encounter astonishing new tribes as you return to the far-future, post-apocalyptic world of Horizon.<br/><br/>The land is dying. Vicious storms and an unstoppable blight ravage the scattered remnants of humanity, while fearsome new machines prowl their borders. Life on Earth is hurtling towards another extinction, and no one knows why.<br/><br/>It's up to Aloy to uncover the secrets behind these threats and restore order and balance to the world. Along the way, she must reunite with old friends, forge alliances with warring new factions and unravel the legacy of the ancient past – all the while trying to stay one step ahead of a seemingly undefeatable new enemy.",
     technical:
       'Language : English <br/> Release Date : 9 May 2024 <br/> Minimum OS: Windows 10 <br/> Minimum Memory: 16gb',
-    similarItems: [1, 2, 3],
+    similarItems: [14, 15, 16],
   },
   {
     id: 20,
@@ -713,39 +714,7 @@ const itemList = [
       "It's time for your Ultimate Horizon Adventure! Explore Mexico's bright and constantly changing open world landscapes while engaging in endless, enjoyable driving action in hundreds of the most significant automobiles ever made.",
     technical:
       'Language : English <br/> Release Date : 12 April 2024 <br/> Min OS: Windows 10',
-    similarItems: [1, 2, 3],
-  },
-  {
-    id: 21,
-    category: 'pc',
-    type: 'videoGame',
-    type_internal: 'search_pc_games',
-    title: 'NieR:Automata',
-    decor: 'Soundtrack Game Award',
-    bgImg: '/assets/products/nier/bg.jpg',
-    tags: 'Singleplayer, Story, Action',
-    cta: 'View Item',
-    productImg: [
-      '/assets/products/nier/1.jpg',
-      '/assets/products/nier/2.jpg',
-      '/assets/products/nier/3.webp',
-      '/assets/products/nier/4.jpg',
-    ],
-    productOptions: [
-      {
-        title: 'PC Game of the Yorha Ed.',
-        price: 29,
-        decor: '<s>$79</s>',
-        stock: 10,
-        physical: false,
-      },
-    ],
-    about:
-      'NieR: Automata tells the story of androids 2B, 9S, and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.<br/><br/>Humanity has been driven from the Earth by mechanical beings from another world. In a final effort to take back the planet, the human resistance sends a force of android soldiers to destroy the invaders. Now, a war between machines and androids rages on... A war that could soon unveil a long-forgotten truth of the world.</p> <h3>Key Features:</h3> <ul> <li><strong>Action-Packed Battles</strong> – Players will switch between using melee and ranged attacks in battle against hordes of enemies and challenging bosses across a variety of open field maps. The tight controls and incredibly fluid combat are simple to learn for newcomers while offering plenty of depth for more experienced action gamers. Players can perform high-speed battle actions—combining light and heavy attacks—and switch through an arsenal of weaponry while evading enemies with speed and style.</li> <li><strong>Beautifully Desolate Open-World</strong> – The game seamlessly joins together hauntingly beautiful vistas and locations with no area loading. The environments are rendered in 60fps and contain a wealth of sub-events in addition to the main storyline.</li> <li><strong>Masterfully Crafted Story and Characters</strong> – NieR: Automata tells the story of androids 2B, 9S, and A2 and their ferocious battle to reclaim a machine-driven dystopia overrun by powerful weapons known as machine lifeforms.</li> <li><strong>Elements of an RPG</strong> – Players will obtain a variety of weapon types, level up in battle, learn new combat skills, and customise a loadout that caters to their playstyle.</li> <li><strong>Utilise the Pod Support System to Assist In and Outside of Battle</strong> – Pods can attack the enemy in both manual and lock-on modes. They can also assist outside of battle, such as allowing the player to glide through the air. Pods can be enhanced throughout the game, with upgrades including new attack methods and variations.</li> <li><strong>“Auto Mode” Available for Beginners</strong> – Novice players can elect “Auto Mode” for easy attacks and evasions.</li> </ul>',
-    technical:
-      'Language : English <br/> Package Dimensions: 17.1 x 13.4 x 1.4 cm; 90 Grams <br/> Release Date : 9 November 2018 <br/> Min OS: Windows 10',
-
-    similarItems: [1, 2, 3],
+    similarItems: [14, 15, 16],
   },
 ];
 
