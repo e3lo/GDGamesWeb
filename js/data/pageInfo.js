@@ -180,7 +180,7 @@ const pageInfo = {
 
     section: [
       {
-        id: 'search_PC_games',
+        id: 'search_pc_games',
         barcodeText: 'PC Games',
         type: 'games',
         title: 'Games',
