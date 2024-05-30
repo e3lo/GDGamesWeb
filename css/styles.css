@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zilla+Slab:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zilla+Slab:wght@400;500&display=swap');
 
 :root {
   --dark: #171717;
+  --dark30: #1717173b;
   --cream: #fffbda;
   --green: #4ade80;
   --green10: rgba(74, 222, 128, 0.1);
@@ -13,7 +14,7 @@
 }
 
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -126,7 +127,7 @@ button:hover,
 }
 
 .GD__icon {
-  font-family: "Material Symbols Outlined";
+  font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
   font-size: 2rem; /* Preferred icon size */
@@ -226,7 +227,7 @@ button:hover,
 }
 
 .checkbox--new:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -278,7 +279,7 @@ button:hover,
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .radio--new:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 1rem;
   top: 1rem;

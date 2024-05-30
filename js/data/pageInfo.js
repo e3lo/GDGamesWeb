@@ -130,18 +130,7 @@ const pageInfo = {
         items: [10, 11, 12],
         src1: '/assets/products/forza/bg.jpg',
         src2: '/assets/decor/xboxGames.jpg',
-        quote:
-          'Try out the new 2024 wireless controllers! It’s a lot better than you think </br> </br> - GD Games',
-      },
-      {
-        id: 'search_xbox_Hardware',
-        barcodeText: 'XBOX Hardware',
-        type: 'bugs',
-        title: 'Controllers',
-        description: 'Home to the best exclusive and award winning games',
-        items: [0, 1, 0],
-        src1: '/assets/banners/GoW.webp',
-        src2: '/assets/decor/ps5Controller.jpg',
+        src3: '/assets/products/forza/1.webp',
         quote:
           'Try out the new 2024 wireless controllers! It’s a lot better than you think </br> </br> - GD Games',
       },

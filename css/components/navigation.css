@@ -8,6 +8,7 @@
   width: 100vw;
   height: 4rem;
   backdrop-filter: blur(16px);
+  background-color: var(--dark30);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
