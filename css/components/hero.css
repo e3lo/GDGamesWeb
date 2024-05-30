@@ -60,6 +60,8 @@
 
   .hero__content__container {
     align-items: start;
+    max-width: 300px;
+    text-align: start;
   }
 
   .hero__title {
