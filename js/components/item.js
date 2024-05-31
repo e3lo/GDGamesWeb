@@ -1,17 +1,17 @@
-import { Component } from '../framework/component.js';
-import { getItemById } from '../framework/itemHandler.js';
+import { Component } from "../framework/component.js";
+import { getItemById } from "../framework/itemHandler.js";
 
 export default class Item extends Component {
   constructor(document) {
-    super('app-item', document);
+    super("app-item", document);
 
     this.props = {
-      id: '',
-      title: '',
-      type: '',
-      description: '',
-      src: '',
-      price: '',
+      id: "",
+      title: "",
+      type: "",
+      description: "",
+      src: "",
+      price: "",
     };
 
     this.onItemClick = this.onItemClick.bind(this);
@@ -29,35 +29,35 @@ export default class Item extends Component {
       this.props.title = itemData.title;
       this.props.type = itemData.productOptions[0].title;
       this.props.description = itemData.tags;
-      this.props.src = '../..' + itemData.productImg[0];
+      this.props.src = "../.." + itemData.productImg[0];
       this.props.price = itemData.productOptions[0].price;
       this.props.cta = itemData.cta;
       super.setTextBinding(templateClone);
     }
 
     // Removing type if empty
-    if (this.props.type === '') {
-      templateClone.querySelector("[-text = 'type']").style.display = 'none';
+    if (this.props.type === "") {
+      templateClone.querySelector("[-text = 'type']").style.display = "none";
     }
 
     // Removing price if empty
     if (this.props.price == null) {
-      templateClone.querySelector('.item__info__price').style.display = 'none';
+      templateClone.querySelector(".item__info__price").style.display = "none";
     }
 
     // Updating images
-    templateClone.querySelector('img').src = this.props.src;
+    templateClone.querySelector("img").src = this.props.src;
     return templateClone;
   }
 
   onItemClick(event) {
     const item = event.srcElement.parentNode.parentNode;
-    const id = item.getAttribute('id');
+    const id = item.getAttribute("id");
 
     console.log(window.location.href);
 
     // For index.html
-    if (window.location.href.includes('index.html')) {
+    if (!window.location.href.includes("/html/pages")) {
       if (isNaN(id)) {
         window.location.href = `./html/pages/section.html?id=${id}`;
       } else {
